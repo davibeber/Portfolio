@@ -1,0 +1,33 @@
+body{
+    background-color: #0d1c48;
+    color: #414141;
+    
+}
+
+/* Seletor universal: afeta todos os elementos da página */
+*{    color: aliceblue;
+}
+
+/*hover: espefica funções ao "passar o mouse no local*/
+#menu li a:hover{
+/* OBS.: Aprender mais sobre hierarquia de tags */    
+    color: rgb(59, 243, 13);
+}
+
+
+nav ul{
+    list-style:none; /* muda a estética dos pontos do lado de listas*/
+    padding:0; /*o que é isso? */
+    margin:0; /*O que é isso?*/
+    display:flex; 
+    /* 
+    Ativa modo flexivel?? mas se é flexivel,
+    qual o sentido de ficar logo na horizontal?
+    */
+    justify-content: center; 
+    /* Aqui deu pra entender que centraliza, ok*/
+    gap: 30px;
+    /* Aqui parece ser a distancia entre eles*/
+
+}
+
