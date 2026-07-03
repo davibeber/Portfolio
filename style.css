@@ -1,18 +1,95 @@
+/* === PADRAO ===
+
+*{
+background-color: rgb(31, 31, 31);
+box-sizing: border-box;
+}
+
+
+
+*/
+
+
+/* Seletor universal: afeta todos os elementos da página */
+*{  color: aliceblue;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+/* O tamanho que eu definir para a caixa tem que ser o tamanho final dela, englobando o padding e a border */
+
+    /*a propriedade que resolve a maior "pegadinha" do CSS.*/
+
+
+}
+
+
 body{
-    background-color: #0d1c48;
+    background-color: rgb(31, 31, 31);
     color: #414141;
     
 }
 
-/* Seletor universal: afeta todos os elementos da página */
-*{    color: aliceblue;
-}
 
 /*hover: espefica funções ao "passar o mouse no local*/
 #menu li a:hover{
 /* OBS.: Aprender mais sobre hierarquia de tags */    
     color: rgb(59, 243, 13);
 }
+
+
+
+
+/*
+
+
+O Content (O Conteúdo): É a palavra "Certificados" em si. 
+Ela define o tamanho inicial da caixa com base no tamanho da fonte.
+
+O Padding (Espaço Interno): O padding empurra a borda para longe do texto.
+O padding empurra a borda para longe do texto.
+    Se você aumentar o padding: A caixa do link cresce, mas o texto continua do mesmo tamanho.
+
+    Resultado prático: A área colorida ou clicável do botão fica maior. 
+    É como colocar uma moldura larga em volta do quadro, aumentando o tamanho do quadro na parede.
+
+O Border (A Borda): É a linha que separa o "dentro" do "fora". 
+Ela fica exatamente onde o padding termina e onde a margin começa. 
+No CSS, você pode dar cor, espessura e estilo a ela (ex: border: 2px solid green;).
+
+
+A Margin (Espaço Externo): A margin empurra outras caixas para longe. 
+Ela não muda o tamanho do seu botão ou do seu link; ela apenas cria uma "zona de isolamento" ao redor dele.
+
+    Se você aumentar a margin: O seu botão continua do mesmo tamanho, mas os botões vizinhos (como "Contato") 
+    serão empurrados para o lado. É o espaço vazio que você deixa na parede entre um quadro e outro para que 
+    eles não batam.
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+/*
+Decidi deixar por padrão aqui as diferenças pra não ter que procurar toda vez. Sempre ter que abrir o 
+resumo fica cansativo
+
+Se for a TAG pura: escreve o nome direto --> h2 { ... } 
+
+Se no HTML tiver class="nome": usa PONTO no CSS --> .nome { ... } 
+
+Se no HTML tiver id="nome": usa HASHTAG no CSS --> #nome{ ... }
+
+*/
 
 
 nav ul{
@@ -26,8 +103,14 @@ nav ul{
     */
     justify-content: center; 
     /* Aqui deu pra entender que centraliza, ok*/
-    gap: 30px;
+    gap: 30px; 
+    /* px= pixels */
     /* Aqui parece ser a distancia entre eles*/
 
 }
 
+/*
+#sobre{
+    text-align: center;
+}
+*/
