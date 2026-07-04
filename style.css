@@ -1,83 +1,15 @@
 /* === PADRAO ===
 
 *{
-background-color: rgb(31, 31, 31);
-box-sizing: border-box;
-}
-
-
-
-*/
-
-
-/* Seletor universal: afeta todos os elementos da página */
-*{  color: aliceblue;
+    color: aliceblue;
+    box-sizing: border-box;
     text-align: center;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
-/* O tamanho que eu definir para a caixa tem que ser o tamanho final dela, englobando o padding e a border */
-
-    /*a propriedade que resolve a maior "pegadinha" do CSS.*/
-
-
-}
-
-
-body{
-    background-color: rgb(31, 31, 31);
-    color: #414141;
-    
-}
-
-
-/*hover: espefica funções ao "passar o mouse no local*/
-#menu li a:hover{
-/* OBS.: Aprender mais sobre hierarquia de tags */    
-    color: rgb(59, 243, 13);
-}
-
-
-
-
-/*
-
-
-O Content (O Conteúdo): É a palavra "Certificados" em si. 
-Ela define o tamanho inicial da caixa com base no tamanho da fonte.
-
-O Padding (Espaço Interno): O padding empurra a borda para longe do texto.
-O padding empurra a borda para longe do texto.
-    Se você aumentar o padding: A caixa do link cresce, mas o texto continua do mesmo tamanho.
-
-    Resultado prático: A área colorida ou clicável do botão fica maior. 
-    É como colocar uma moldura larga em volta do quadro, aumentando o tamanho do quadro na parede.
-
-O Border (A Borda): É a linha que separa o "dentro" do "fora". 
-Ela fica exatamente onde o padding termina e onde a margin começa. 
-No CSS, você pode dar cor, espessura e estilo a ela (ex: border: 2px solid green;).
-
-
-A Margin (Espaço Externo): A margin empurra outras caixas para longe. 
-Ela não muda o tamanho do seu botão ou do seu link; ela apenas cria uma "zona de isolamento" ao redor dele.
-
-    Se você aumentar a margin: O seu botão continua do mesmo tamanho, mas os botões vizinhos (como "Contato") 
-    serão empurrados para o lado. É o espaço vazio que você deixa na parede entre um quadro e outro para que 
-    eles não batam.
-
-
+    padding: 0;  
+}}
 
 
 */
-
-
-
-
-
-
-
-
-
 
 /*
 Decidi deixar por padrão aqui as diferenças pra não ter que procurar toda vez. Sempre ter que abrir o 
@@ -91,26 +23,59 @@ Se no HTML tiver id="nome": usa HASHTAG no CSS --> #nome{ ... }
 
 */
 
+*{
+    color: aliceblue;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+    padding: 0;  
+}
+
+header{
+    background-color: rgb(21, 21, 21);
+    /* color: aliceblue --> Lembrar de por dps*/
+    
+}
+
 
 nav ul{
-    list-style:none; /* muda a estética dos pontos do lado de listas*/
-    padding:0; /*o que é isso? */
-    margin:0; /*O que é isso?*/
-    display:flex; 
-    /* 
-    Ativa modo flexivel?? mas se é flexivel,
-    qual o sentido de ficar logo na horizontal?
-    */
-    justify-content: center; 
+    display:flex; /*ativa um "campo de força" que te dá o poder de controlar como os Filhos vão se comportar lá dentro.*/
+                /* Por padrão, as tags <div> ficam uma embaixo da outra (comportamento de bloco), 
+                mas dps do display:flex, elas ficam uma do lado da outra (comportamento de linha).*/
+    justify-content: center; /*Há outros comandos além de "center" mas que não são tão relevantes para agora*/
     /* Aqui deu pra entender que centraliza, ok*/
+    /* align-items: center; Centraliza na vertical */
     gap: 30px; 
-    /* px= pixels */
-    /* Aqui parece ser a distancia entre eles*/
+    list-style:none; /* muda a estética dos pontos do lado de listas*/
+    margin:0px auto; /* centraliza a lista horizontalmente */
+    padding:30px;
+    border-bottom: 2px solid rgb(217, 177, 0);
+}
+/* tela do dispositivo | margin | border | padding | (texto/imagem) */
+
+
+nav ul li{
+    padding: 0 30px;
 
 }
 
-/*
-#sobre{
-    text-align: center;
+nav ul li a{
+    text-decoration: none; /* retira o sublinhado do link */
 }
-*/
+
+/* hover: espefica funções ao "passar o mouse no local */
+#menu li a:hover{
+/* OBS.: Aprender mais sobre hierarquia de tags */    
+    color:rgb(217, 177, 0);
+}
+
+#btn-contato button{
+    
+    background-color: rgb(21, 21, 21);
+    color: rgb(217, 177, 0);
+}
+
+
+body{
+    background-color: rgb(50, 50, 50);
+}
