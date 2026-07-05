@@ -1,27 +1,4 @@
-/* === PADRAO ===
 
-*{
-    color: aliceblue;
-    box-sizing: border-box;
-    text-align: center;
-    margin: 0;
-    padding: 0;  
-}}
-
-
-*/
-
-/*
-Decidi deixar por padrão aqui as diferenças pra não ter que procurar toda vez. Sempre ter que abrir o 
-resumo fica cansativo
-
-Se for a TAG pura: escreve o nome direto --> h2 { ... } 
-
-Se no HTML tiver class="nome": usa PONTO no CSS --> .nome { ... } 
-
-Se no HTML tiver id="nome": usa HASHTAG no CSS --> #nome{ ... }
-
-*/
 
 *{
     color: aliceblue;
@@ -33,47 +10,104 @@ Se no HTML tiver id="nome": usa HASHTAG no CSS --> #nome{ ... }
 
 header{
     background-color: rgb(21, 21, 21);
+
     /* color: aliceblue --> Lembrar de por dps*/
-    
+
+    padding: 20px; /* espaço ao redor do conteúdo do cabeçalho, só os links*/
+    display: flex; /* Flexbox para alinhar os itens do cabeçalho */
+    justify-content: space-between; /* Espaço entre os itens do cabeçalho */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* tela do dispositivo | margin | border | padding | (texto/imagem)*/
+
+
+
+
+
+#logo img{ 
+/* 
+Como a div so contem a img, podemos fazer dessa forma. Isso desfaz o erro de alterar o tamanho da caixa para
+o tamanho da imagem em si.    
+*/
+
+    width:50px; 
+/* 
+controla o tamanho da logo, mas por algum motivo está aumentando o espaço ao redor dela.
+Procurar como realmente aumentar o tamanho da logo sem aumentar o espaço ao redor dela.
+*/
+    height: auto; 
+/* 
+Está alterando a altura relativo ao tamanho ocupado pelo header. Acredito que "auto" deixa sua "altura" flexivel
+quando for necesario para o header se moldar a tela.        
+*/
+
+
+
+display: block; /* Faz a logo se comportar como um bloco, ocupando toda a largura disponível */
+filter: invert(1); /* Inverte as cores da imagem, deixando-a branca */
+
+/* pq (1)?*/
+
+/* 
+
+filter: drop-shadow(0px 0px 5px rgb(217, 177, 0)); 
+Adiciona uma sombra à imagem da logo 
+
+"Damn, Something is cooking."
+
+
+*/
+
 }
 
 
 nav ul{
-    display:flex; /*ativa um "campo de força" que te dá o poder de controlar como os Filhos vão se comportar lá dentro.*/
-                /* Por padrão, as tags <div> ficam uma embaixo da outra (comportamento de bloco), 
-                mas dps do display:flex, elas ficam uma do lado da outra (comportamento de linha).*/
-    justify-content: center; /*Há outros comandos além de "center" mas que não são tão relevantes para agora*/
-    /* Aqui deu pra entender que centraliza, ok*/
-    /* align-items: center; Centraliza na vertical */
-    gap: 30px; 
+    display:flex;             
+    justify-content: center; /* Aqui deu pra entender que centraliza, ok*/
     list-style:none; /* muda a estética dos pontos do lado de listas*/
     margin:0px auto; /* centraliza a lista horizontalmente */
     padding:30px;
-    border-bottom: 2px solid rgb(217, 177, 0);
-}
-/* tela do dispositivo | margin | border | padding | (texto/imagem) */
+    border-bottom: 2px  solid rgb(217, 177, 0);
+    gap: 30px; 
 
-
-nav ul li{
-    padding: 0 30px;
+    /* align-items: center; */
 
 }
+
+
+
 
 nav ul li a{
     text-decoration: none; /* retira o sublinhado do link */
+    font-weight: bold; /*deixa o texto em negrito */
+    /* font-weight = tamanho da fonte */
+
+    transition: color 0.2s; /* Deixa a troca de cor do hover suave */
+
 }
 
-/* hover: espefica funções ao "passar o mouse no local */
+
 #menu li a:hover{
 /* OBS.: Aprender mais sobre hierarquia de tags */    
-    color:rgb(217, 177, 0);
+    color:rgb(255, 234, 0);
 }
 
-#btn-contato button{
-    
-    background-color: rgb(21, 21, 21);
-    color: rgb(217, 177, 0);
-}
+
+
+
 
 
 body{
