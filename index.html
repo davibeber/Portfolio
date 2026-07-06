@@ -4,10 +4,9 @@
 <!-- Ou use "!" e aperte enter pra acelerar a criação da estrutura-->
 
 <html lang="en">
-<head><!--onde fica toda a parte inteligente da página. No HEAD ficam os
+<head><!--onde fica toda a parte inteligente da página. Aqui ficam os
 metadados. Metadados são informações sobre a página e o conteúdo ali publicado.-->
-<!-- head fornece informações para o navegador. não confundir com <header>-->
-<!---->
+<!-- fornecendo informações para o navegador. não confundir com <header>-->
 
 <!--O que um portifolio precisa?-->    
 <!--Quem é você (Sobre)-->   
@@ -27,6 +26,9 @@ metadados. Metadados são informações sobre a página e o conteúdo ali public
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
                                         <!-- What is it mean?-->
+
+    <!-- Pesquisar sobre fontes de letras pra "instalar" no portifólio-->
+    
     <title>Portifólio</title>
 </head>
 <body><!--Tudo dentro do body é Flow content= conteudo de fluxo. 
@@ -57,19 +59,19 @@ metadados. Metadados são informações sobre a página e o conteúdo ali public
             <a  href="#">
                 <button>Contato</button>
             </a>
-            
         </div>
 </header>
 
     <main><!-- Cerca o conteudo principal de cada pagina, aquilo que não se repete, como o menu e o rodapé-->
-        <section id="sobre"><!--Dividi o conteúdo em blocos temáticos, section=comodo diferente-->
+        <section class="secao-conteudo">
+            <h2>Sobre mim</h2>
             <p>
                 Dediquei os últimos anos(2022 – 2025) à preparação para concurso de carreiras militares. 
                 Atualmente foco minha transição para Setor de TI, com hábito de estudo contínuo, priorizando a aplicação 
                 prática do conhecimento através da construção de projetos e do aprofundamento contínuo na escrita de código.
             </p>
         </section>
-        <section id="#Competencia">
+        <section class="secao-conteudo">
             <p>Competências técnicas</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, vitae.</p>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, quidem?</p>
@@ -80,11 +82,11 @@ metadados. Metadados são informações sobre a página e o conteúdo ali public
                 <li></li>
             </ul>    
         </section>
-        <section id="Certificados">
+        <section class="secao-conteudo">
             <h2>Meus certificados</h2>
             <p>Cursos, especializações e eventos na area de TI.</p>
 
-            <ul class="lista-certificados">
+            <ul>
 
                 <li>
                     <h3>Programação orientada a objetos</h3>
@@ -107,7 +109,15 @@ metadados. Metadados são informações sobre a página e o conteúdo ali public
                 </li>
             </ul>
         </section>
+
+        <section class="secao-conteudo">
+            <h2>Meus projetos</h2>
+            <p>Projetos desenvolvidos durante a formação em programação.</p>
         
+
+
+        
+        </section>
     </main>
 
 

@@ -7,9 +7,22 @@
     margin: 0;
     padding: 0;  
 
-    outline: 1px solid white; /* Para ver o tamanho das caixas, só pra teste */
+    /* outline: 1px solid white; Para ver o tamanho das caixas, só pra teste */
     /* ISSO DAQUI É MUITO BOM! */
+
+   
 }
+
+
+/* 
+Pra fazer o efeito de zoom no menu, precisa ter o transform: scale(1.1) no hover, mas tbm precisa que o 
+display seja inline-block, pra que o link se comporte como um bloco, ocupando toda a largura disponível. 
+mas quando ponho em inline-block, o menu fica todo desconfigurado, então vou ter que fazer um display flex no ul, e ai sim
+o menu vai ficar centralizado e com o efeito de zoom no hover.
+
+*/
+
+
 
 header{
     background-color: rgb(21, 21, 21);
@@ -21,6 +34,7 @@ header{
     justify-content: space-between; /* Espaço entre os itens do cabeçalho */
     align-items: center; /* Alinha os itens verticalmente ao centro */
     border-bottom: 2px  solid rgb(217, 177, 0);
+
 
 }
 
@@ -47,7 +61,10 @@ Adiciona uma sombra à imagem da logo
 "Damn, Something is cooking."
 */
 
-    margin-left:10px; /* Espaço entre a logo e o menu */
+    margin-left:0px; /* Espaço entre a logo e o menu */
+    
+
+
 }
 
 
@@ -62,14 +79,21 @@ nav ul{
 
     /* align-items: center; ???*/
 
+
+
+
 }
 
 nav ul li a{
     text-decoration: none; /* retira o sublinhado do link */
     font-weight: bold; /*deixa o texto em negrito */
+    display:inline-block; /* Faz o link se comportar como um bloco, ocupando toda a largura disponível */
+
     /* font-weight = tamanho da fonte */
 
     transition: color 0.2s; /* Deixa a troca de cor do hover suave */
+
+
 
 }
 
@@ -87,7 +111,6 @@ nav ul li a{
 
     padding: 10px 20px;       /* Dá um espaço interno para o texto não ficar espremido */
     border-radius: 5px;       /* Arredonda levemente os cantos (fica super moderno) */  
-
     flex: 1; /* Faz o botão ocupar o espaço disponível */
     justify-content: flex-end; /* Alinha o botão à direita */
 
@@ -97,14 +120,37 @@ Talvez não seja necessario, ao "linkar" o botao com uma area do site iss ja aco
 */  
 
 
-
-
 }
-
-
-
-
 
 body{
     background-color: rgb(33, 33, 33);
 }
+
+
+/* Classe unica para todas as seções do site */
+
+.secao-conteudo{
+    border: 1px solid rgb(217, 177, 0);
+    border-radius: 10px;
+    padding: 60px 4%;
+    margin: 40px auto; /* Está mexendo no espaço vertical externo, entre cada seção, mas não entendo o "auto" */
+
+
+    /* 📏 2. O SEGREDO DO TAMANHO ADAPTÁVEL */
+    max-width: 1400px;  /* max-width = largura máxima */
+
+    /* Limita o quanto o retângulo pode crescer e o width aproveita total espaço disponivel.*/
+    /* O retângulo nunca passa de 1280px de largura */
+
+    width: 100%; /* width = largura */
+    /* Em telas menores (celular), ele se adapta a 100% da tela */
+    /* isso piora a estética do site para telas menores como a de celular, sendo necessario adaptar dps*/
+
+    height: auto;       /* 🚀 DIZ AO RETÂNGULO: "Cresça na vertical o quanto o texto precisar!" */
+
+
+    /* 🧩 5. A REGRA DE OURO DOS TAMANHOS */
+    box-sizing: border-box; /* Garante que o padding de 40px NÃO empurre o retângulo para fora dos 1280px */
+
+}
+
