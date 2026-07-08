@@ -132,7 +132,7 @@ body{
 .secao-conteudo{
     border: 1px solid rgb(217, 177, 0);
     border-radius: 10px;
-    padding: 60px 4%;
+    padding: 150px 4%;
     margin: 40px auto; /* Está mexendo no espaço vertical externo, entre cada seção, mas não entendo o "auto" */
 
 
@@ -152,5 +152,87 @@ body{
     /* 🧩 5. A REGRA DE OURO DOS TAMANHOS */
     box-sizing: border-box; /* Garante que o padding de 40px NÃO empurre o retângulo para fora dos 1280px */
 
+
+
+    position: relative;
 }
+
+
+
+.sobre{
+    display: flex;                 
+    justify-content: space-between; 
+    align-items: center;
+    gap: 40px; /* Espaço entre a imagem e o texto */
+    position: relative;
+    
+}
+
+.sobre h2{
+    position:absolute; /* Isso daqui é muito bom */
+/*
+ Eu imaginava que a movimentação dos elementos/tags iriam se sobrepor uma outra naturalmente, mas o html por 
+ natureza trata tudo de uma forma que, ao mover um elemento para outro lugar, ele empurra tudo que estiver no caminho.
+ então pra sobrepor sem movimentar outros elementos de lugar, usar "position:absolute".
+
+ Só tenho que me atentar se isso é visto como uma prática ruim ou preguiçosa, pq isso de fato vai ajudar muito.
+*/
+
+    color:rgb(247, 204, 13);
+    margin-left: 600px;
+    margin-bottom: 320px;
+    /* 
+    Bottom = parte inferior
+    Bottom ≠ Button    
+    */
+}
+
+.sobre p{
+    max-width: 850px;
+    font-size: 20px;
+    line-height: 1.6; /* Deixa do jeito que tá*/
+}
+
+
+
+.foto_perfil{
+    width: 300px; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5%; /* Deixa a imagem redonda */
+    margin-bottom: 20px; /* Espaço abaixo da imagem */
+}
+
+
+
+
+
+
+.competencias h2{
+    position:absolute;
+    color:rgb(247, 204, 13);
+    margin-left: 500px;
+    margin-bottom: 320px;
+
+
+}
+
+
+.certificado h2{
+    position:absolute;
+    color:rgb(247, 204, 13);
+    margin-left: 500px;
+    margin-bottom: 420px;
+}
+
+
+.projeto h2{
+    position:absolute;
+    color:rgb(247, 204, 13);
+    margin-left: 500px;
+    margin-bottom: 420px;
+
+}
+
+
+
 
