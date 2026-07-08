@@ -127,35 +127,37 @@ body{
 }
 
 
-/* Classe unica para todas as seções do site */
+
+.secao_1{
+    border: 1px solid rgb(217, 177, 0);
+    border-radius: 10px;
+    padding: 150px 4%;
+    margin: 40px auto; 
+    max-width: 1400px;
+    width: 100%; 
+    height: auto;  
+    box-sizing: border-box; 
+    position: relative;
+}
+
+
+
+/*
 
 .secao-conteudo{
     border: 1px solid rgb(217, 177, 0);
     border-radius: 10px;
     padding: 150px 4%;
-    margin: 40px auto; /* Está mexendo no espaço vertical externo, entre cada seção, mas não entendo o "auto" */
-
-
-    /* 📏 2. O SEGREDO DO TAMANHO ADAPTÁVEL */
-    max-width: 1400px;  /* max-width = largura máxima */
-
-    /* Limita o quanto o retângulo pode crescer e o width aproveita total espaço disponivel.*/
-    /* O retângulo nunca passa de 1280px de largura */
-
-    width: 100%; /* width = largura */
-    /* Em telas menores (celular), ele se adapta a 100% da tela */
-    /* isso piora a estética do site para telas menores como a de celular, sendo necessario adaptar dps*/
-
-    height: auto;       /* 🚀 DIZ AO RETÂNGULO: "Cresça na vertical o quanto o texto precisar!" */
-
-
-    /* 🧩 5. A REGRA DE OURO DOS TAMANHOS */
-    box-sizing: border-box; /* Garante que o padding de 40px NÃO empurre o retângulo para fora dos 1280px */
-
-
-
+    margin: 40px auto; 
+    max-width: 1400px;
+    width: 100%; 
+    height: auto;  
+    box-sizing: border-box; 
     position: relative;
 }
+
+*/
+
 
 
 
@@ -180,7 +182,7 @@ body{
 
     color:rgb(247, 204, 13);
     margin-left: 600px;
-    margin-bottom: 320px;
+    margin-bottom: 420px;
     /* 
     Bottom = parte inferior
     Bottom ≠ Button    
@@ -204,16 +206,75 @@ body{
 
 
 
+.secao_2{
+    border: 1px solid rgb(217, 177, 0);
+    border-radius: 10px;
+    padding: 340px 4%;
+    margin: 40px auto; 
+    max-width: 1400px;
+    width: 100%; 
+    height: auto;  
+    box-sizing: border-box;
+    display:flex;
+    align-items: center;
+
+
+    /*
+    display:flex;
+    align-items: center;
+    
+    Sempre usar esses dois para manipular a posição de outros elementos, alem de facilitar o uso do 
+    position: absolute
+
+    */
+
+
+}
+
+/*
+.sobre{
+    display: flex;                 
+    justify-content: space-between; 
+    align-items: center;
+    gap: 40px; 
+    position: relative;
+    
+}
+*/
 
 
 
 .competencias h2{
     position:absolute;
     color:rgb(247, 204, 13);
+    margin-bottom: 500px;
     margin-left: 500px;
-    margin-bottom: 320px;
+
+}
+
+.competencias p{
+    max-width: 850px;
+    font-size: 20px;
+    line-height: 1.6; /* Deixa do jeito que tá*/
+}
+
+.secao_2 ul li{ /* Esse caminho deu certo */
+    list-style:none; /* muda a estética dos pontos do lado de listas*/
+}
 
 
+
+.secao_3{
+     border: 1px solid rgb(217, 177, 0);
+    border-radius: 10px;
+    padding: 340px 4%;
+    margin: 40px auto; 
+    max-width: 1400px;
+    width: 100%; 
+    height: auto;  
+    box-sizing: border-box;
+    display:flex;
+    align-items: center;
 }
 
 
@@ -225,6 +286,40 @@ body{
 }
 
 
+.certificado p{
+    max-width: 850px;
+    font-size: 20px;
+    line-height: 1.6; /* Deixa do jeito que tá*/
+
+}
+
+
+
+.secao_3 ul li{
+    list-style:none;
+}
+
+
+
+.secao_4{
+     border: 1px solid rgb(217, 177, 0);
+    border-radius: 10px;
+    padding: 340px 4%;
+    margin: 40px auto; 
+    max-width: 1400px;
+    width: 100%; 
+    height: auto;  
+    box-sizing: border-box;
+    display:flex;
+    align-items: center;
+
+}
+
+
+
+
+
+
 .projeto h2{
     position:absolute;
     color:rgb(247, 204, 13);
@@ -234,5 +329,9 @@ body{
 }
 
 
-
+.projeto p{
+    max-width: 850px;
+    font-size: 20px;
+    line-height: 1.6; /* Deixa do jeito que tá*/
+}
 
