@@ -335,3 +335,47 @@ body{
     line-height: 1.6; /* Deixa do jeito que tá*/
 }
 
+
+
+
+.rodape{
+    background-color: yellow;
+    padding: 100px;
+
+}
+
+
+#logo img{ 
+/* 
+Como a div so contem a img, podemos fazer dessa forma. Isso desfaz o erro de alterar o tamanho da caixa para
+o tamanho da imagem em si.    
+*/
+    flex: 1; /* Faz a logo ocupar o espaço disponível */
+    justify-content: flex-start; /* Alinha a logo à esquerda */
+    width:40px; 
+/*  height: auto; ??? */
+    display: block; /* Faz a logo se comportar como um bloco, ocupando toda a largura disponível */
+    filter: invert(1); /* Inverte as cores da imagem, deixando-a branca */
+    /* pq (1)?*/
+/* 
+filter: drop-shadow(0px 0px 5px rgb(217, 177, 0)); 
+Adiciona uma sombra à imagem da logo 
+
+"Damn, Something is cooking."
+*/
+
+    margin-left:0px; /* Espaço entre a logo e o menu */
+    
+
+
+}
+
+#linkedin img{
+    width: 60px;
+
+}
+
+#gh img{
+    width: 60px;
+
+}
