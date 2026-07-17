@@ -31,23 +31,13 @@ metadados. Metadados são informações sobre a página e o conteúdo ali public
     
     <title>Portifólio</title>
 </head>
-<body><!--Tudo dentro do body é Flow content= conteudo de fluxo. 
-    É a maior e mais abrangente categoria de elementos,     
-    engloba quase tudo que pode ser colocado no body-->
+<body>
 <header>
-    <div id="logo"><!--Logo do site, pode ser uma imagem ou um texto-->
-        <a href="index.html">
-            <img src="bootstrap/x-diamond-fill.svg" alt=""> <!-- Logo teste -->
-        </a>
-    </div>
-
-        <nav><!--menu=composto por links principais para navegação do site-->
-            <!-- ul = organiza a lista e organiza com pontos -->
-            <!-- li = organiza a lista sem ser pontuada -->
+        <nav>
             <ul id="menu"><!--Suporte de uma lista??-->
                 <li><a href="#inicio">Ínicio</a></li>
-                <li><a href="#Competencia">Competencia</a></li>
-                <li><a href="#Certificados">Certificados</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
                 <!-- Futuramente criar aba de projetos -->
                 
             </ul>
@@ -56,14 +46,14 @@ metadados. Metadados são informações sobre a página e o conteúdo ali public
                 <!-- serve para agrupar links importantes para uma noção de mapeamento pra quem é deficiente visual-->
                 <!-- Pesquisar e testar melhor sobre isso -->
         <div id="btn-contato">
-            <a  href="#">
+            <a  href="#contato">
                 <button>Contato</button>
             </a>
         </div>
 </header>
 
     <main><!-- Cerca o conteudo principal de cada pagina, aquilo que não se repete, como o menu e o rodapé-->
-        <section class="secao_1 inicio">
+        <section id="inicio" class="secao_1 inicio">
             <img src="images/foto_perfil.png" alt="Foto de perfil" class="foto_perfil">
             <!-- o que seria alt?  -->
             <h2>Sobre mim</h2>
@@ -81,48 +71,37 @@ metadados. Metadados são informações sobre a página e o conteúdo ali public
             </p>
             </div>
         </section>
-        <section class="secao_2 competencias">
-            <h2>Competências técnicas</h2>
+        <section id="habilidades" class="secao_2 habilidades">
+            <h2>Habilidades</h2>
             <ul>
                 <li>Linguagens: Java (POO) | Python | SQL</li>
+                <li>HTML: Conhecimento básico</li>
+                <li>CSS: Conhecimento básico</li>
+                <li>javascript: Conhecimento nulo</li>
+                <li>GIT: Conhecimento commit, push e branch secundárias para repositorio e conexão com a plataforma
+                    Github.</li>
+                <li>Github: Conhecimento na criação de repositórios e práticas com README </li>
+                <li>Python: experiencia com linguagem procedural e POO, além experiencia em práticas recentes com bibliotecas
+                    como pygame, numpy e sched.
+                </li>
+                <li>SQL: Revisão pendente</li>
+                <li>Java: Conhecimento básico. Fundamentos de POO (Linguagem Orientada a Objetos) consolidados.</li>
                 <li>Conhecimentos em: Git | GitHub | Pycharm | IntelliJ | MySQL Workbench | Fundamentos de CI/CD</li>
                 <li>Metodologias e Práticas: Scrum | Kanban | Extreme Programming (XP)</li>
             </ul>    
         </section>
-        <section class="secao_3 certificado">
-            <h2>Meus certificados</h2>
-            <p></p>
-            <!-- Cursos, especializações e eventos na area de TI. -->
-            <ul>
-                <li>
-                    <h3>Programação orientada a objetos</h3>
-                    <span class="plataforma"> Fundação Bradesco </span>
-                    <p class="detalhes">Carga horária: 5 horas | Concluído em 02/03/26 </p>
-                    <a href="https://drive.google.com/file/d/1m-SPGvZz-29fPOe_iJrpkB7-SXLXN0I4/view?usp=sharing" target="_blank" class="btn-verificar">Verificar Certificado</a>
-                </li>
-
-                <li>
-                    <h3> Linguagem de programação python - Básico</h3>
-                    <span class="plataforma">Fundação Bradesco</span>
-                    <p class="detalhes">Carga horária: 18 horas | Concluído em 11/05/26 </p>
-                    <a href="https://drive.google.com/file/d/1FCCllI0f_x62CS5vu0LdCq3oK-io2c1Y/view?usp=sharing" target="_blank" class="btn-verificar">Verificar Certificado</a>
-                </li>
-                <li>
-                    <h3>Tecnologia da informação</h3>
-                    <span class="plataforma"> Fundação Bradesco</span>
-                    <p class="detalhes">Carga horária: 7 horas | Concluído em 15/12/25 </p>
-                    <a href="https://drive.google.com/file/d/1esqWmYV5g2fhzgRGNm74JthdC_1GkGax/view?usp=sharing" target="_blank" class="btn-verificar"> Verificar Certificado</a>
-                </li>
-            </ul>
+        <section id="projetos" class="secao_3 projetos">
+            <h2>Projetos</h2>
+            <p>Em breve</p>
+            
         </section>
 
 
         
-        </section>
     </main>
 
-            <footer class="rodape">
-                <section id="#Contato">
+            <footer id="contato" class="rodape">
+                <section id="#contato">
                     <p style="color:black">© 2026 - Davi Béber Ribeiro</p>
                     <!-- Trocar a <img> por <svg> de todas as svgs-->>
 

@@ -1,16 +1,9 @@
 
 
 *{
-    color: aliceblue;
     box-sizing: border-box;
-    text-align: center;
     margin: 0;
-    padding: 0;  
-
-    /* outline: 1px solid white; Para ver o tamanho das caixas, só pra teste */
-    /* ISSO DAQUI É MUITO BOM! */
-
-   
+    padding: 0;    
 }
 
 
@@ -26,104 +19,63 @@ o menu vai ficar centralizado e com o efeito de zoom no hover.
 
 header{
     background-color: rgb(21, 21, 21);
-
-    /* color: aliceblue --> Lembrar de por dps*/
-
-    padding: 5px 4%; /* espaço ao redor do conteúdo do cabeçalho, só os links*/
-    display: flex; /* Flexbox para alinhar os itens do cabeçalho */
-    justify-content: space-between; /* Espaço entre os itens do cabeçalho */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
     border-bottom: 2px  solid rgb(217, 177, 0);
+    padding: 5px 4%; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-
+    position: sticky;
+    top: 0; /* menu fixo no topo*/
+    z-index: 9999;/* valor alto garante que a camada fique fixa no topo e não seja perdida*/
 }
 
 
 /* tela do dispositivo | margin | border | padding | (texto/imagem)*/
 
 
-#logo img{ 
-/* 
-Como a div so contem a img, podemos fazer dessa forma. Isso desfaz o erro de alterar o tamanho da caixa para
-o tamanho da imagem em si.    
-*/
-    flex: 1; /* Faz a logo ocupar o espaço disponível */
-    justify-content: flex-start; /* Alinha a logo à esquerda */
-    width:40px; 
-/*  height: auto; ??? */
-    display: block; /* Faz a logo se comportar como um bloco, ocupando toda a largura disponível */
-    filter: invert(1); /* Inverte as cores da imagem, deixando-a branca */
-    /* pq (1)?*/
-/* 
-filter: drop-shadow(0px 0px 5px rgb(217, 177, 0)); 
-Adiciona uma sombra à imagem da logo 
-
-"Damn, Something is cooking."
-*/
-
-    margin-left:0px; /* Espaço entre a logo e o menu */
-    
-
-
-}
-
 
 nav ul{
-    display:flex;
-    flex: 1; /* Faz o menu ocupar o espaço disponível */             
-    justify-content: center; /* Aqui deu pra entender que centraliza, ok*/
     list-style:none; /* muda a estética dos pontos do lado de listas*/
     margin:0px auto; /* centraliza a lista horizontalmente */
     padding:30px;
-    gap: 120px; 
-
-    /* align-items: center; ???*/
-
+    gap: 50px;
+    display: flex;
 
 
 
 }
 
 nav ul li a{
+    color: aliceblue;
     text-decoration: none; /* retira o sublinhado do link */
     font-weight: bold; /*deixa o texto em negrito */
-    display:inline-block; /* Faz o link se comportar como um bloco, ocupando toda a largura disponível */
-
+    transition: color 0.2s; /* Deixa a troca de cor do hover suave */
     /* font-weight = tamanho da fonte */
 
-    transition: color 0.2s; /* Deixa a troca de cor do hover suave */
-
-
-
+    
 }
 
-/* hover: espefica funções ao "passar o mouse no local */
 #menu li a:hover{
-/* OBS.: Aprender mais sobre hierarquia de tags */    
     color:rgb(255, 234, 0);
 }
 
 #btn-contato button{
     background-color: rgb(255, 179, 0);
     color: rgb(0, 0, 0);
-    border:none; /* Remove a borda padrão do botão */
-/*  border: 2px solid rgb(217, 177, 0); */
+    border:none; 
+    padding: 10px 20px;    
+    border-radius: 5px;
 
-    padding: 10px 20px;       /* Dá um espaço interno para o texto não ficar espremido */
-    border-radius: 5px;       /* Arredonda levemente os cantos (fica super moderno) */  
-    flex: 1; /* Faz o botão ocupar o espaço disponível */
-    justify-content: flex-end; /* Alinha o botão à direita */
-
-    /*  
-cursor: pointer;  Faz o ponteiro do mouse virar a "mãozinha" de clique 
-Talvez não seja necessario, ao "linkar" o botao com uma area do site iss ja acontece automaticamente
-*/  
 
 
 }
 
 body{
     background-color: rgb(33, 33, 33);
+    color: aliceblue;
+
 }
 
 
@@ -171,22 +123,17 @@ body{
 }
 
 .inicio h2{
-    position:absolute; /* Isso daqui é muito bom */
-/*
- Eu imaginava que a movimentação dos elementos/tags iriam se sobrepor uma outra naturalmente, mas o html por 
- natureza trata tudo de uma forma que, ao mover um elemento para outro lugar, ele empurra tudo que estiver no caminho.
- então pra sobrepor sem movimentar outros elementos de lugar, usar "position:absolute".
-
- Só tenho que me atentar se isso é visto como uma prática ruim ou preguiçosa, pq isso de fato vai ajudar muito.
-*/
+    position:absolute; 
 
     color:rgb(247, 204, 13);
-    margin-left: 600px;
+    margin-left: 750px;
     margin-bottom: 420px;
     /* 
     Bottom = parte inferior
     Bottom ≠ Button    
     */
+
+    font-size: 40px;
 }
 
 #one{
@@ -216,7 +163,7 @@ body{
 
 
 .secao_2{
-    border: 1px solid rgb(217, 177, 0);
+    border:none;
     border-radius: 10px;
     padding: 340px 4%;
     margin: 40px auto; 
@@ -226,34 +173,9 @@ body{
     box-sizing: border-box;
     display:flex;
     align-items: center;
-
-
-    /*
-    display:flex;
-    align-items: center;
-    
-    Sempre usar esses dois para manipular a posição de outros elementos, alem de facilitar o uso do 
-    position: absolute
-
-    */
-
-
 }
 
-/*
-.sobre{
-    display: flex;                 
-    justify-content: space-between; 
-    align-items: center;
-    gap: 40px; 
-    position: relative;
-    
-}
-*/
-
-
-
-.competencias h2{
+.habilidades h2{
     position:absolute;
     color:rgb(247, 204, 13);
     margin-bottom: 500px;
@@ -261,7 +183,7 @@ body{
 
 }
 
-.competencias p{
+.habilidades p{
     max-width: 850px;
     font-size: 20px;
     line-height: 1.6; /* Deixa do jeito que tá*/
@@ -274,7 +196,7 @@ body{
 
 
 .secao_3{
-     border: 1px solid rgb(217, 177, 0);
+    border: none;
     border-radius: 10px;
     padding: 340px 4%;
     margin: 40px auto; 
@@ -287,7 +209,7 @@ body{
 }
 
 
-.certificado h2{
+.projetos h2{
     position:absolute;
     color:rgb(247, 204, 13);
     margin-left: 500px;
@@ -295,7 +217,7 @@ body{
 }
 
 
-.certificado p{
+.projetos p{
     max-width: 850px;
     font-size: 20px;
     line-height: 1.6; /* Deixa do jeito que tá*/
