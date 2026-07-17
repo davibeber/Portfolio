@@ -129,7 +129,7 @@ body{
 
 
 .secao_1{
-    border: 1px solid rgb(217, 177, 0);
+    
     border-radius: 10px;
     padding: 150px 4%;
     margin: 40px auto; 
@@ -161,16 +161,16 @@ body{
 
 
 
-.sobre{
+.inicio{
     display: flex;                 
     justify-content: space-between; 
     align-items: center;
     gap: 40px; /* Espaço entre a imagem e o texto */
     position: relative;
-    
+    text-align: justify;
 }
 
-.sobre h2{
+.inicio h2{
     position:absolute; /* Isso daqui é muito bom */
 /*
  Eu imaginava que a movimentação dos elementos/tags iriam se sobrepor uma outra naturalmente, mas o html por 
@@ -189,12 +189,21 @@ body{
     */
 }
 
-.sobre p{
+#one{
     max-width: 850px;
     font-size: 20px;
-    line-height: 1.6; /* Deixa do jeito que tá*/
+    line-height: 1.3; /* Deixa do jeito que tá*/
+    text-align: left;
+    text-indent: 30px;
 }
 
+#two{
+    max-width: 850px;
+    font-size: 20px;
+    line-height: 1.3; /* Deixa do jeito que tá*/
+    text-align: left;
+    text-indent: 30px;
+}
 
 
 .foto_perfil{
