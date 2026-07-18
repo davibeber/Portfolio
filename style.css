@@ -7,17 +7,7 @@
 }
 
 
-/* 
-Pra fazer o efeito de zoom no menu, precisa ter o transform: scale(1.1) no hover, mas tbm precisa que o 
-display seja inline-block, pra que o link se comporte como um bloco, ocupando toda a largura disponível. 
-mas quando ponho em inline-block, o menu fica todo desconfigurado, então vou ter que fazer um display flex no ul, e ai sim
-o menu vai ficar centralizado e com o efeito de zoom no hover.
-
-*/
-
-
-
-header{
+header{ /*topo, a estética geral do menu principal */
     background-color: rgb(21, 21, 21);
     border-bottom: 2px  solid rgb(217, 177, 0);
     padding: 5px 4%; 
@@ -30,54 +20,104 @@ header{
     top: 0; /* menu fixo no topo*/
     z-index: 9999;/* valor alto garante que a camada fique fixa no topo e não seja perdida*/
 }
-
-
 /* tela do dispositivo | margin | border | padding | (texto/imagem)*/
 
-
-
-nav ul{
+nav ul{ /* estética, alinhamento e espaçamento das opções ao redor delas*/
     list-style:none; /* muda a estética dos pontos do lado de listas*/
     margin:0px auto; /* centraliza a lista horizontalmente */
     padding:30px;
     gap: 50px;
     display: flex;
-
-
-
 }
 
-nav ul li a{
+nav ul li a{ /* estetica das palavras em si no menu */
     color: aliceblue;
     text-decoration: none; /* retira o sublinhado do link */
-    font-weight: bold; /*deixa o texto em negrito */
-    transition: color 0.2s; /* Deixa a troca de cor do hover suave */
-    /* font-weight = tamanho da fonte */
-
-    
+    font-size: 20px;
+    font-weight: bold; /* bold = deixa o texto em negrito */
+    transition: transform 0.2s, color 0.2s; /* Deixa a troca de cor do hover suave */
+ 
+    display:inline-block ; /* links precisam disso para aceitar o transform*/
 }
 
-#menu li a:hover{
+#menu li a:hover{ /* quando passar o cursor em cima do menu */
     color:rgb(255, 234, 0);
+    transform: scale(1.2);
 }
 
-#btn-contato button{
-    background-color: rgb(255, 179, 0);
-    color: rgb(0, 0, 0);
-    border:none; 
-    padding: 10px 20px;    
-    border-radius: 5px;
 
 
-
-}
-
-body{
+body{ /* comandos gerais de estética do site */
     background-color: rgb(33, 33, 33);
     color: aliceblue;
 
 }
 
+.inicio{ /* organização  geral da apresentação*/
+    padding-top: 120px;
+    padding-bottom: 180px;
+    margin-top: 120px;
+    margin-left: 340px;
+    font-size: 35px;
+}
+
+.inicio h2{ /* Palavra em destaque */
+    color:rgb(255, 213, 0);
+}
+
+.inicio p{ 
+    text-align: left;
+}
+
+
+.logo-inicio a{
+    align-items: center;
+    text-decoration: none;
+
+    border: 2px solid rgb(248, 203, 6);
+    border-radius: 10px;
+    margin: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+/* é so um teste ... e não deu muito certo */
+.logo-inicio a :hover{
+    color:blue;
+
+}
+
+/* é so um teste ... e não deu muito certo */
+.logo-inicio a svg :hover{
+    color: blue;
+}
+
+.logo-inicio svg{ /* Alteração das logos somente*/
+    width:20px;
+    fill:rgb(247, 204, 13);
+    margin-top: 30px;
+
+    
+}
+
+.logo-inicio span{
+    color:rgb(247, 204, 13);
+    font-size: 20px;
+
+
+}
+
+
+.foto_perfil{
+    width: 300px; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5%; /* Deixa a imagem redonda */
+    
+    margin-left: 600px;
+
+    position: absolute;
+}
 
 
 .secao_1{
@@ -94,26 +134,9 @@ body{
 
 
 
-/*
-
-.secao-conteudo{
-    border: 1px solid rgb(217, 177, 0);
-    border-radius: 10px;
-    padding: 150px 4%;
-    margin: 40px auto; 
-    max-width: 1400px;
-    width: 100%; 
-    height: auto;  
-    box-sizing: border-box; 
-    position: relative;
-}
-
-*/
 
 
-
-
-.inicio{
+.sobre{
     display: flex;                 
     justify-content: space-between; 
     align-items: center;
@@ -122,11 +145,11 @@ body{
     text-align: justify;
 }
 
-.inicio h2{
+.sobre h2{
     position:absolute; 
 
     color:rgb(247, 204, 13);
-    margin-left: 750px;
+    margin-left: 260px;
     margin-bottom: 420px;
     /* 
     Bottom = parte inferior
@@ -153,12 +176,7 @@ body{
 }
 
 
-.foto_perfil{
-    width: 300px; /* Define a largura da imagem */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 5%; /* Deixa a imagem redonda */
-    margin-bottom: 20px; /* Espaço abaixo da imagem */
-}
+
 
 
 
@@ -268,19 +286,23 @@ body{
 
 
 
-.projeto h2{
+.projetos h2{
     position:absolute;
     color:rgb(247, 204, 13);
     margin-left: 500px;
     margin-bottom: 420px;
 
+    font-size: 50px;
+
 }
 
 
-.projeto p{
+.projetos p{
     max-width: 850px;
-    font-size: 20px;
+    font-size: 50px;
     line-height: 1.6; /* Deixa do jeito que tá*/
+
+    margin-left: 500px;
 }
 
 
@@ -288,42 +310,7 @@ body{
 
 .rodape{
     background-color: rgb(255, 217, 0);
-    padding: 100px;
-
-}
-
-
-#logo img{ 
-/* 
-Como a div so contem a img, podemos fazer dessa forma. Isso desfaz o erro de alterar o tamanho da caixa para
-o tamanho da imagem em si.    
-*/
-    flex: 1; /* Faz a logo ocupar o espaço disponível */
-    justify-content: flex-start; /* Alinha a logo à esquerda */
-    width:40px; 
-/*  height: auto; ??? */
-    display: block; /* Faz a logo se comportar como um bloco, ocupando toda a largura disponível */
-    filter: invert(1); /* Inverte as cores da imagem, deixando-a branca */
-    /* pq (1)?*/
-/* 
-filter: drop-shadow(0px 0px 5px rgb(217, 177, 0)); 
-Adiciona uma sombra à imagem da logo 
-
-"Damn, Something is cooking."
-*/
-
-    margin-left:0px; /* Espaço entre a logo e o menu */
-    
-
-
-}
-
-#linkedin img{
-    width: 60px;
-
-}
-
-#gh img{
-    width: 60px;
+    padding: 15px;
+    text-align: center;
 
 }
