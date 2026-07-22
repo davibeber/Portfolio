@@ -2,19 +2,15 @@
 
 <html lang="en">
 <head>
-
     <link rel="stylesheet" href="style.css">
     <script src="script.js">faltajavascriptu</script>
     <noscript>Seu navegador não tem suporte a Javascript ou está desativado!</noscript>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    
     <title>Portifólio</title>
 </head>
 <body>
-<header>
+    <header>
         <nav>
             <ul id="menu">
                 <li><a href="#inicio">Ínicio</a></li>
@@ -24,14 +20,14 @@
                 
             </ul>
         </nav> 
-</header>
+    </header>
     <main>
-        <section id="inicio" class="inicio">
+        <section id="inicio" class="secao_1">
             <div class="flex"><!-- inicio-->
                 <div><!-- Conteudo do texto e links-->
                     <div> <!-- Somente texto-->
                         <p>Olá, eu sou</p>
-                        <h2>Davi.</h2>
+                        <h1>Davi.</h1>
                         <p>Desenvolvedor Front-end</p>
                         <!--Alterar subtitulo dps-->
                     </div>
@@ -59,10 +55,9 @@
                 </div>
             </div>
         </section>
-        <section id="sobre" class="secao_1 sobre">
-                <!-- o que seria alt?  -->
-                <h2>Sobre mim</h2>
-                <div>
+        <section id="sobre" class="secao_2 sobre">
+            <h2>Sobre mim</h2>
+            <div>
                 <p id="one"> Oi, eu sou Davi Béber Ribeiro. Antes de focar para a área de TI, 
                     eu estudava para concurso de carreiras militares. Atualmente foco na minha transição em construir uma 
                     base sólida, buscando minha primeira oportunidade como desenvolvedor estagiário ou júnior. <br><br>
@@ -74,107 +69,83 @@
                     profissional nesse universo tecnológico. Essa clareza só veio anos depois, quando escolhi minha graduação 
                     e decidi focar de verdade na área tecnológica.
                 </p>
-                </div>
-            </section>
-            <section id="habilidades" class="secao_2 habilidades">
-                <h2>Habilidades</h2>          
-                <ul>
-                    <!-- TITULOS: FRONTEND/PROGRAMAÇÃO WEB-->
-            
-                    <li class="card">
-                        <img class="logo-habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-        
-                        <div class="descricao">
-                            <h3>HTML</h3>
-                            <p> Conhecimento básico </p>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <img class="logo-habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
-                        
-                        <div class="descricao">
-                            <h3>CSS</h3>
-                            <p> Conhecimento básico </p>
-                        </div>
-                        
-                        
-                    </li>
-                    <li class="card">
-                        <img class="logo-habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-                        
-                        <div class="descricao">
-                            <h3>javascript</h3>
-                            <p> Conhecimento nulo </p>
-                        </div>
-                    </li>
-
-                    <!--Ferramentas de gestão?-->
-                    <li class="card">
-                        <img class="logo-habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
-            
-                        <div class="descricao">
-                            <h3>GIT</h3>
-                            <p>  Conhecimento commit, push e branch secundárias para repositorio e conexão com a plataforma
-                        Github </p>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <img class="logo-habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
-            
-                        <div class="descricao">
-                            <h3>Github</h3>
-                            <p>  Conhecimento na criação de repositórios e práticas com README </p>
-                        </div>                
-                    </li>
-        
-                    <!--Linguagens de programação-->
-                    <li class="card">
-                        <img class="logo-habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
-            
-                        <div class="descricao">
-                            <h3>Python</h3>
-                            <p>  experiencia com linguagem procedural e POO, além experiencia em práticas 
+            </div>
+        </section>
+        <section id="habilidades" class="secao_3 habilidades">
+            <h2>Habilidades</h2>         
+            <ul>
+                <li class="card">
+                    <img class="logo-habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                    <div class="descricao">
+                        <h3>HTML</h3>
+                        <p> Conhecimento básico </p>
+                    </div>
+                </li>
+                <li class="card">
+                    <img class="logo-habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                    <div class="descricao">
+                        <h3>CSS</h3>
+                        <p> Conhecimento básico </p>
+                    </div>
+                </li>
+                <li class="card">
+                    <img class="logo-habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                    <div class="descricao">
+                        <h3>javascript</h3>
+                        <p> Revisão pendente </p>
+                    </div>
+                </li>
+                <!--Ferramentas de gestão?-->
+                <li class="card">
+                    <img class="logo-habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+                    <div class="descricao">
+                        <h3>GIT</h3>
+                        <p>  Conhecimento commit, push e branch secundárias para repositorio e conexão com a plataforma
+                            Github </p>
+                    </div>
+                </li>
+                <li class="card">
+                    <img class="logo-habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
+                    <div class="descricao">
+                        <h3>Github</h3>
+                        <p>  Conhecimento na criação de repositórios e práticas com README </p>
+                    </div>                
+                </li>
+                <!--Linguagens de programação-->
+                <li class="card">
+                    <img class="logo-habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                    <div class="descricao">
+                        <h3>Python</h3>
+                        <p>  experiencia com linguagem procedural e POO, além experiencia em práticas 
                             recentes com bibliotecas como pygame, numpy e sched. </p>
-                        </div>  
-                        
-                    </li>
-                    <li class="card">
-                        <img class="logo-habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
-            
-                        <div class="descricao">
-                            <h3>SQL</h3>
-                            <p>  Revisão pendente </p>
-                        </div> 
-                        
-                        
-                    </li>
-                    <li class="card">
-                        <img class="logo-habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
-
-                        <div class="descricao">
-                            <h3>Java</h3>
-                            <p>  Conhecimento básico. Fundamentos de POO (Linguagem Orientada a Objetos) consolidados. </p>
-                        </div> 
-                    </li>
-                    <!-- Ponho mais coisas? IDEs? outras ferramentas?-->
-                </ul>    
-            </section>
-            <section id="projetos" class="secao_3 projetos">
-                <h2>Projetos</h2>
-                <p>Em breve</p>
-                
-            </section>
-
-
-        
+                    </div>  
+                </li>
+                <li class="card">
+                    <img class="logo-habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
+                    <div class="descricao">
+                        <h3>SQL</h3>
+                        <p>  Revisão pendente </p>
+                    </div>         
+                </li>
+                <li class="card">
+                    <img class="logo-habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+                    <div class="descricao">
+                        <h3>Java</h3>
+                        <p>  Conhecimento básico. Fundamentos de POO (Linguagem Orientada a Objetos) consolidados. </p>
+                    </div> 
+                </li>
+                <!-- Ponho mais coisas? IDEs? outras ferramentas?-->
+            </ul>    
+        </section>
+        <section id="projetos" class="secao_4 projetos">
+            <h2>Projetos</h2>
+            <p>Em breve</p>
+        </section>
     </main>
-        <footer id="contato" class="rodape">
-            <section id="#contato">
-                <p style="color:black">© 2026 - Davi Béber Ribeiro</p>
-                <!-- Trocar a <img> por <svg> de todas as svgs-->
-
-                
-            </section>
-        </footer>
+    <footer id="contato" class="rodape">
+        <section id="#contato">
+            <p style="color:black"> © 2026 - Davi Béber Ribeiro </p>
+        </section>
+    </footer>
 </body>
 </html>

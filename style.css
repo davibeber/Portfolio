@@ -4,14 +4,26 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;    
+
+    /*outline: 1px solid red; */
+
 }
 
+html {
+    scroll-behavior: smooth;
+}
+/* Faz a tela deslizar suavemente até a seção em vez de dar um pulo seco */
 
-header{ /*topo, a estética geral do menu principal */
+section {
+    scroll-margin-top: 200px; /* A escolha de 200px foi em tentativa e erro */
+}
+
+/* tela do dispositivo | margin | border | padding | (texto/imagem)*/
+
+header{ /* Topo, a estética geral do menu principal */
     background-color: rgb(21, 21, 21);
     border-bottom: 2px  solid rgb(217, 177, 0);
     padding: 5px 4%; 
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,41 +32,11 @@ header{ /*topo, a estética geral do menu principal */
     top: 0; /* menu fixo no topo*/
     z-index: 9999;/* valor alto garante que a camada fique fixa no topo e não seja perdida*/
 
-
 }
-/* tela do dispositivo | margin | border | padding | (texto/imagem)*/
-
-
-section, 
-#inicio, 
-#sobre, 
-#habilidades, 
-#projetos {
-    /* Mude esse valor para a ALTURA EXATA do seu menu/cabeçalho + um respiro. 
-       Exemplo: se seu menu tem 80px de altura, coloque 100px aqui */
-    scroll-margin-top: 120px;
-}
-/*
-isso daqui funcionou, mas tenho que decidir se deixou assim com as # ou se ponho em algum estilo generico
-o que eu acho que não tem
-
-*/
-
-/* Faz a tela deslizar suavemente até a seção em vez de dar um pulo seco */
-html {
-    scroll-behavior: smooth;
-}
-
-
-
-
-
-
-
 
 nav ul{ /* estética, alinhamento e espaçamento das opções ao redor delas*/
     list-style:none; /* muda a estética dos pontos do lado de listas*/
-    margin:0px auto; /* centraliza a lista horizontalmente */
+    margin:0px auto; 
     padding:30px;
     gap: 50px;
     display: flex;
@@ -67,9 +49,7 @@ nav ul li a{ /* estetica das palavras em si no menu */
     font-size: 20px;
     font-weight: bold; /* bold = deixa o texto em negrito */
     transition: transform 0.2s, color 0.2s; /* Deixa a troca de cor do hover suave */
- 
     display:inline-block ; /* links precisam disso para aceitar o transform*/
-
 }
 
 #menu li a:hover{ /* quando passar o cursor em cima do menu */
@@ -82,44 +62,34 @@ nav ul li a{ /* estetica das palavras em si no menu */
 body{ /* comandos gerais de estética do site */
     background-color: rgb(33, 33, 33);
     color: aliceblue;
-
-
 }
-
-
-
-
-
 
 .flex{
     display: flex;
 }
 
-
-.inicio{ /* organização  geral da apresentação*/
-    padding-top: 80px;
-    padding-bottom: 180px;
-    margin-top: 120px;
+.secao_1{ /* organização  geral da apresentação */
     margin-left: 340px;
     font-size: 35px;
-} /* SECTION */
 
-.inicio h2{ /* Palavra em destaque */
+    margin-top: 100px;
+    padding-top: 100px;
+    padding-bottom: 140px;
+}
+
+.secao_1 h1{ /* Nome em destaque */
     color:rgb(255, 213, 0);
-} /* SECTION --> H2*/
+    font-size: 70px;
+}
 
-.inicio p{ 
+.secao_1 p{ 
     text-align: left;
-} /*SECTION --> P */
-
+}
 
 .logo-inicio{
     display: flex;
-    align-items: center;
-
-   
+    align-items: center;  
 }
-
 
 .logo-inicio a{
     text-decoration: none;
@@ -130,28 +100,21 @@ body{ /* comandos gerais de estética do site */
     justify-content: center;
 
     overflow: visible; /* Garante que nada corte nas bordas */
-
-
 }
 
-.logo-inicio a svg{ /* Alteração das logos somente*/
+.logo-inicio a svg{ /* Alteração das logos somente */
     width:45px;
     height: 45px; /* É bom definir a altura para manter a proporção */
     fill:white;
 
     margin: 0;
-
     transition: transform 0.3s ease-in-out;
     transform-origin: center center;
     display: block;
-
-    
 }
 
 .logo-inicio a:hover svg {
     transform: scale(1.2);
-    /* Se quiser que a logo fique amarela no hover para combinar com a borda, desentoca aqui: */
-    /* fill: rgb(248, 203, 6); */
 }
 
 
@@ -178,14 +141,16 @@ body{ /* comandos gerais de estética do site */
 .foto_perfil{ /* funcionou */
     width: 300px; /* Define a largura da imagem */
     height: auto; /* Mantém a proporção da imagem */
-    border-radius: 5%; /* Deixa a imagem redonda */
-    
-    margin-left: 250px;
+    border: 5px double rgb(233, 182, 0);
+/*
+Hà variações de border que achei melhor não esquecer:
+none,solid, double, dashed,dotted,groove,ridge,inset e outset
+*/
 
+    border-radius: 5%; /* Deixa a imagem redonda */
+    margin-left: 250px;
     position:relative;
     animation: flutuar 2s ease-in-out infinite alternate;
-
-
 }
 
 
@@ -194,43 +159,18 @@ body{ /* comandos gerais de estética do site */
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.secao_1{
-    
-    border-radius: 10px;
-    padding: 150px 4%;
-    margin: 40px auto; 
+.secao_2{
     max-width: 1400px;
     width: 100%; 
     height: auto;  
     box-sizing: border-box; 
     position: relative;
+
+    margin: 100px;
+    padding-top: 100px;
+    padding-bottom: 200px;
+
 }
-
-
-
-
 
 .sobre{
     display: flex;                 
@@ -243,7 +183,7 @@ body{ /* comandos gerais de estética do site */
 
 .sobre h2{
     position:absolute; 
-
+    font-size: 40px;
     color:rgb(247, 204, 13);
     margin-left: 260px;
     margin-bottom: 420px;
@@ -251,8 +191,6 @@ body{ /* comandos gerais de estética do site */
     Bottom = parte inferior
     Bottom ≠ Button    
     */
-
-    font-size: 40px;
 }
 
 #one{
@@ -271,48 +209,38 @@ body{ /* comandos gerais de estética do site */
     text-indent: 30px;
 }
 
-
-
-
-
-
 .card{
     display: flex; /*Ativa o alinhamento horizontal*/
     padding:40px;
     align-items:center; /* Centralizar os elementos horizontalmente */
-
 }
 
 .logo-habilidades{
     width: 100px;
 }
 
-
-
-.secao_2{
-    border:none;
-    border-radius: 10px;
-    padding: 340px 4%;
-    margin: 40px auto; 
+.secao_3{
     max-width: 1400px;
     width: 100%; 
-    height: auto;  
     box-sizing: border-box;
     display:flex;
     align-items: center;
+
+    margin-top: 140px; /* não sei se esse seria o ideal mas tirei o padding-top e o scroll está certo*/
+    margin-left: 100px;
+
+    padding-top: 90px;
+    padding-bottom: 140px;
 }
 
 .habilidades h2{
     position:absolute;
     color:rgb(247, 204, 13);
+    font-size: 50px;
 
     margin-bottom: 1700px;
     margin-left: 500px;
-
-    font-size: 50px;
 }
-
-
 
 .habilidades p{
     max-width: 850px;
@@ -320,15 +248,21 @@ body{ /* comandos gerais de estética do site */
     line-height: 1.6; /* Deixa do jeito que tá*/
 }
 
-.secao_2 ul li{ /* Esse caminho deu certo */
-    list-style:none; /* muda a estética dos pontos do lado de listas*/
+.secao_4{
+    max-width: 1400px;
+    width: 100%; 
+    box-sizing: border-box;
+    display:flex;
+    align-items: center;
+
+    margin-left: 80px;
+    margin-top: 120px;
+    margin-bottom: 100px;
+    padding: 100px;
+    padding-bottom: 400px;
 }
 
-
-
-.secao_3{
-    border: none;
-    border-radius: 10px;
+.secao_4{
     padding: 340px 4%;
     margin: 40px auto; 
     max-width: 1400px;
@@ -339,12 +273,12 @@ body{ /* comandos gerais de estética do site */
     align-items: center;
 }
 
-
 .projetos h2{
     position:absolute;
     color:rgb(247, 204, 13);
     margin-left: 500px;
     margin-bottom: 420px;
+    padding-top: 50px;
 }
 
 
@@ -357,30 +291,6 @@ body{ /* comandos gerais de estética do site */
 
 
 
-.secao_3 ul li{
-    list-style:none;
-}
-
-
-
-.secao_4{
-     border: 1px solid rgb(217, 177, 0);
-    border-radius: 10px;
-    padding: 340px 4%;
-    margin: 40px auto; 
-    max-width: 1400px;
-    width: 100%; 
-    height: auto;  
-    box-sizing: border-box;
-    display:flex;
-    align-items: center;
-
-}
-
-
-
-
-
 
 .projetos h2{
     position:absolute;
@@ -392,7 +302,6 @@ body{ /* comandos gerais de estética do site */
 
 }
 
-
 .projetos p{
     max-width: 850px;
     font-size: 50px;
@@ -401,12 +310,8 @@ body{ /* comandos gerais de estética do site */
     margin-left: 500px;
 }
 
-
-
-
-.rodape{
+footer{
     background-color: rgb(255, 217, 0);
     padding: 15px;
     text-align: center;
-
 }
