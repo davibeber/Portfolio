@@ -19,8 +19,38 @@ header{ /*topo, a estética geral do menu principal */
     position: sticky;
     top: 0; /* menu fixo no topo*/
     z-index: 9999;/* valor alto garante que a camada fique fixa no topo e não seja perdida*/
+
+
 }
 /* tela do dispositivo | margin | border | padding | (texto/imagem)*/
+
+
+section, 
+#inicio, 
+#sobre, 
+#habilidades, 
+#projetos {
+    /* Mude esse valor para a ALTURA EXATA do seu menu/cabeçalho + um respiro. 
+       Exemplo: se seu menu tem 80px de altura, coloque 100px aqui */
+    scroll-margin-top: 120px;
+}
+/*
+isso daqui funcionou, mas tenho que decidir se deixou assim com as # ou se ponho em algum estilo generico
+o que eu acho que não tem
+
+*/
+
+/* Faz a tela deslizar suavemente até a seção em vez de dar um pulo seco */
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
 
 nav ul{ /* estética, alinhamento e espaçamento das opções ao redor delas*/
     list-style:none; /* muda a estética dos pontos do lado de listas*/
@@ -28,6 +58,7 @@ nav ul{ /* estética, alinhamento e espaçamento das opções ao redor delas*/
     padding:30px;
     gap: 50px;
     display: flex;
+
 }
 
 nav ul li a{ /* estetica das palavras em si no menu */
@@ -38,6 +69,7 @@ nav ul li a{ /* estetica das palavras em si no menu */
     transition: transform 0.2s, color 0.2s; /* Deixa a troca de cor do hover suave */
  
     display:inline-block ; /* links precisam disso para aceitar o transform*/
+
 }
 
 #menu li a:hover{ /* quando passar o cursor em cima do menu */
@@ -51,73 +83,137 @@ body{ /* comandos gerais de estética do site */
     background-color: rgb(33, 33, 33);
     color: aliceblue;
 
+
 }
 
+
+
+
+
+
+.flex{
+    display: flex;
+}
+
+
 .inicio{ /* organização  geral da apresentação*/
-    padding-top: 120px;
+    padding-top: 80px;
     padding-bottom: 180px;
     margin-top: 120px;
     margin-left: 340px;
     font-size: 35px;
-}
+} /* SECTION */
 
 .inicio h2{ /* Palavra em destaque */
     color:rgb(255, 213, 0);
-}
+} /* SECTION --> H2*/
 
 .inicio p{ 
     text-align: left;
+} /*SECTION --> P */
+
+
+.logo-inicio{
+    display: flex;
+    align-items: center;
+
+   
 }
 
 
 .logo-inicio a{
-    align-items: center;
     text-decoration: none;
+    padding: 12px;   
 
-    border: 2px solid rgb(248, 203, 6);
-    border-radius: 10px;
-    margin: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-bottom: 5px;
-}
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
 
-/* é so um teste ... e não deu muito certo */
-.logo-inicio a :hover{
-    color:blue;
+    overflow: visible; /* Garante que nada corte nas bordas */
+
 
 }
 
-/* é so um teste ... e não deu muito certo */
-.logo-inicio a svg :hover{
-    color: blue;
-}
+.logo-inicio a svg{ /* Alteração das logos somente*/
+    width:45px;
+    height: 45px; /* É bom definir a altura para manter a proporção */
+    fill:white;
 
-.logo-inicio svg{ /* Alteração das logos somente*/
-    width:20px;
-    fill:rgb(247, 204, 13);
-    margin-top: 30px;
+    margin: 0;
+
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center center;
+    display: block;
 
     
 }
 
-.logo-inicio span{
-    color:rgb(247, 204, 13);
-    font-size: 20px;
-
-
+.logo-inicio a:hover svg {
+    transform: scale(1.2);
+    /* Se quiser que a logo fique amarela no hover para combinar com a borda, desentoca aqui: */
+    /* fill: rgb(248, 203, 6); */
 }
 
 
-.foto_perfil{
+#in{
+    fill:rgb(36, 36, 224);
+}
+#gh{
+    fill:white;
+}
+#wpp{
+    fill:rgb(0, 209, 140);
+}
+
+
+@keyframes flutuar {
+    0%{
+        top:0
+    }    
+    100%{
+        top: 30px;
+    }
+}
+
+.foto_perfil{ /* funcionou */
     width: 300px; /* Define a largura da imagem */
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 5%; /* Deixa a imagem redonda */
     
-    margin-left: 600px;
+    margin-left: 250px;
 
-    position: absolute;
+    position:relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .secao_1{
