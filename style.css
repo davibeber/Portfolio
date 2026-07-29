@@ -315,3 +315,155 @@ footer{
     padding: 15px;
     text-align: center;
 }
+
+
+
+/* ==========================================================================================================*/
+
+
+/* Acredito ser um padrão de largura px para celulares */
+@media (max-width:768px){
+
+/* 
+Para que tudo se adapte em QUALQUER celular (do menor ao maior), 
+a regra de ouro é usar porcentagem ou fluido: 
+*/
+
+
+/* 1. Força a página a NÃO ter rolagem invisível para os lados */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Trava a largura da tela no limite do celular */
+}
+
+
+
+
+
+
+
+
+
+nav ul li a{
+    font-size: 15px;
+    transition: transform 0.2s, color 0.2s; /* Deixa a troca de cor do hover suave */
+    display:inline-block ; /* links precisam disso para aceitar o transform*/
+}
+
+#menu li a:hover{ /* quando passar o cursor em cima do menu */
+    color:rgb(255, 234, 0);
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+/* 2. Garante que as seções não fiquem com a largura antiga de PC */
+section {
+    width: 100%;
+    box-sizing: border-box; /* Faz as bordas e paddings ficarem dentro dos 100% */
+    
+
+}
+
+
+.secao_1{
+    font-size: 30px;
+    margin-left: 0;
+    padding: 0 15px;
+}
+
+.secao_1 h1{ /* Nome em destaque */
+    color:rgb(255, 213, 0);
+    font-size: 32px;
+}
+
+
+
+
+@keyframes flutuar {
+    0%{
+        top:0
+    }    
+    100%{
+        top: 30px;
+    }
+}
+
+.foto_perfil{ /* funcionou */
+    width: 100px; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border: 5px double rgb(233, 182, 0);
+/*
+Hà variações de border que achei melhor não esquecer:
+none,solid, double, dashed,dotted,groove,ridge,inset e outset
+*/
+
+    border-radius: 5%; /* Deixa a imagem redonda */
+    margin-left: 0px;
+    position:relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+
+
+.secao_2{
+    font-size: 30px;
+    margin-left: 0;
+    padding: 0 15px;
+}
+
+.sobre{
+     font-size: 30px;
+    margin-left: 0;
+    padding: 0 15px;
+
+}
+
+
+.sobre h2{
+    font-size: 30px;
+    margin-left: 0;
+    padding: 0 15px;
+}
+
+
+
+.secao_3{
+     font-size: 30px;
+    margin-left: 0;
+    padding: 0 15px;
+}
+
+.secao_3 h2{
+    font-size: 30px;
+    margin-left: 0;
+    padding: 0 15px;
+}
+
+
+.secao_4{
+    font-size: 30px;
+    margin-left: 0;
+    padding: 0 15px;
+}
+
+.projetos h2{
+    font-size: 30px;
+    margin-left: 0;
+    padding: 0 15px;
+}
+
+.projetos p {
+    font-size: 30px;
+    margin-left: 0;
+    padding: 0 15px;
+}
+
+
+
+}
