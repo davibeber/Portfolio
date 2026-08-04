@@ -270,7 +270,7 @@ footer{
 
 
 /* Acredito ser um padrão de largura px para celulares */
-@media (max-width: 768px) and ( max-height: 432px) {
+@media (max-width: 768px){
 
 /* 
 Para que tudo se adapte em QUALQUER celular (do menor ao maior), 
@@ -354,7 +354,6 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     border-radius: 5%; /* Deixa a imagem redonda */
     margin-left: 0px;
     position:relative;
-    animation: flutuar 2s ease-in-out infinite alternate;
 }
 
 
