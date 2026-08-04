@@ -270,7 +270,7 @@ footer{
 
 
 /* Acredito ser um padrão de largura px para celulares */
-@media (max-width: 432px ) and ( max-height: 768px) {
+@media (max-width: 768px) and ( max-height: 432px) {
 
 /* 
 Para que tudo se adapte em QUALQUER celular (do menor ao maior), 
