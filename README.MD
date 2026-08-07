@@ -1,9 +1,11 @@
 # Meu Portifólio
+
 Link: https://davibeber.github.io/Portifolio/
 
+![Static Badge](https://img.shields.io/badge/Status-Melhoria_Cont%C3%ADnua-orange?style=for-the-badge&logo=git&logoColor=white&labelColor=black)
+
+
 Criei este portfólio para mostrar na prática minha evolução como estudante em ADS. É uma apresentação mais detalhada da minha jornada, apresentando um pouco sobre mim, meus projetos e ferramentas de forma que um currículo tradicional não permite por ter um espaço um tanto limitado.
-
-
 
 
 ## Metas na criação do portifolio:
