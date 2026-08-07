@@ -16,7 +16,7 @@ Criei este portfólio para mostrar na prática minha evolução como estudante e
 - [x] Layout responsivo, adaptado para celular (considerei prioridade depois que o portifolio obteve uma estrutura minimamente aceitavel)
 - [ ] Implementação de modo escuro/claro (Dark Mode)
 - [ ] Formulário de contato funcional (aprender tavlez com JS e implementar no portifolio)
-- [ ] - Preview
+- [ ] - Preview (foto do portifólio)
 
 
 
@@ -27,20 +27,12 @@ Criei este portfólio para mostrar na prática minha evolução como estudante e
 - **Controle de Versão:** Git & GitHub
 
 
-
-
-## Aprendizados
-
-
-
-
 ### Construção do README do portifolio:
 
 - [ ] - Adicionar link para portifolio ativo;
 - [ ] - Adicionar Badges;
 - [ ] - mencionar ferramentas e linguagens usadas
-- [ ] - Aprendizados e Desafios (Opcional, mas muito valorizado)
-- [ ] - Aprendizados;
+- [ ] - Aprendizados e Desafios
 - [ ] - Preencher o "About";
 
 
@@ -48,10 +40,4 @@ Criei este portfólio para mostrar na prática minha evolução como estudante e
 
 
 
-
-## subtitulo
-
-*italico*
-**negrito**
-~~riscado~~
 
