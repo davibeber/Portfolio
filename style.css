@@ -347,27 +347,38 @@ header{
 }
 
 #menu_mobile{ /* Menu mobile */
-    display:none;
-
-}
-
-#menu_mobile.ativo{
-    display: flex;
-
-}
-
-
-#menu_mobile ul{
-    background-color: rgba(0, 0, 0, 0.393);
-    position: absolute;
+    position: fixed;
     top:105px;
     left:0;
     width: 80%;
     height:100vh;
+    background-color: rgba(0, 0, 0, 0.393);
+
+    z-index: 99;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+
+}
+
+#menu_mobile.ativo{
+    transform: translateX(0);
+}
+
+
+#menu_mobile ul{
+    list-style: none;
+    align-items: center;
+    display: flex;
     flex-direction: column;
     padding-top: 77px;
     transition:1.5s; /* Não funciona ou não sei onde por*/
-
+    gap: 25px; /* Espaçamento entre cada opção do menu */
+    width: 100%;
 /* 
 ul = afetou o grupo menu 
 li a = afeta o espaço entre cada opção de menu
@@ -379,7 +390,8 @@ li a = afeta o espaço entre cada opção de menu
 
 #menu_mobile li a{ /* Estética das letras | padding vai afetar a palavra isolada */
     color: white;
-    
+    font-size: 1.2rem;
+    text-decoration: none;
 }
 
 #menu_mobile li a:hover{

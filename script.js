@@ -12,3 +12,12 @@ btn.addEventListener("click", () => {
   list.classList.toggle("ativo");
   close.classList.toggle("ativo");
 });
+
+menuMobile.addEventListener("click", () => {
+    menuMobile.classList.remove("ativo");
+
+
+
+
+
+});
