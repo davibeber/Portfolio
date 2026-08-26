@@ -65,15 +65,6 @@ nav ul li a{ /* estetica das palavras em si no menu */
 
 
 
-#menu_desktop{
-    display: none;
-}
-
-
-#close{
-    display: none;
-}
-
 #btn{
     display: none;
 /* Essa função não faz com que o elemento fique invisivel ou intangivel,
@@ -312,7 +303,7 @@ html, body {
 
 header{
     background-color: #0A1024;
-    padding: 30px 4%;
+    padding: 20px 4%;
     display: flex;
     justify-content: start;
     border-bottom:2px solid #3DF2E0 ;
@@ -328,13 +319,32 @@ header{
 }
 
 #btn{
+    display: flex;
     background:transparent;
-    color: aqua;
+    color: rgba(10, 222, 222, 0.427);
     border: 2px solid rgba(0, 255, 255, 0.386);
-    padding: 5px;
+    padding: 10px 10px;
     cursor: pointer;
 }
 
+#list{
+    width: 40px;
+    height: 40px;
+}
+
+#list.ativo{
+    display: none;
+}
+
+#close{
+    display: none;
+}
+
+#close.ativo{
+    display: flex;
+    width: 40px;
+    height: 40px;
+}
 
 #menu_mobile{ /* Menu mobile */
     display:none;
@@ -350,9 +360,9 @@ header{
 #menu_mobile ul{
     background-color: rgba(0, 0, 0, 0.393);
     position: absolute;
-    top:77px;
+    top:105px;
     left:0;
-    width: 100%;
+    width: 70%;
     height:100vh;
     flex-direction: column;
     padding-top: 77px; 
@@ -363,8 +373,7 @@ li a = afeta o espaço entre cada opção de menu
 
 }
 
-#menu_mobile ul{ /* padding afetou o grupo menu */
-}
+
 
 #menu_mobile li a{ /* Estética das letras | padding vai afetar a palavra isolada */
     color: white;
@@ -372,11 +381,9 @@ li a = afeta o espaço entre cada opção de menu
 
 #menu_mobile li a:hover{
     background-color: rgba(0, 255, 255, 0.381);
-}
+    display: block;
+    color: black;
 
-
-#menu li a{ /* Formatação das opções do menu, as palavras em si*/
-    color: white;
 }
 
 
