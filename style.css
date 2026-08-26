@@ -58,18 +58,6 @@ nav ul li a{ /* estetica das palavras em si no menu */
     flex-direction: row;
 }
 
-#botao_menu{
-    
-    display: none;
-/* Essa função não faz com que o elemento fique invisivel ou intangivel,
-o elemento simplesmente não é carregado, o que faz com que determinadas funções no JS possam
-simplesmente ser desativadas se depender de uma ação apenas*/
-}
-
-#close{
-    display:none;
-}
-
 #menu li a:hover{ /* quando passar o cursor em cima do menu */
     color: #3DF2E0;
     transform: scale(1.2);
@@ -77,7 +65,24 @@ simplesmente ser desativadas se depender de uma ação apenas*/
 
 
 
-.menu_mobile{
+#menu_desktop{
+    display: none;
+}
+
+
+#close{
+    display: none;
+}
+
+#btn{
+    display: none;
+/* Essa função não faz com que o elemento fique invisivel ou intangivel,
+o elemento simplesmente não é carregado, o que faz com que determinadas funções no JS possam
+simplesmente ser desativadas se depender de uma ação apenas*/
+}
+
+
+#menu_mobile{
     display: none;
 }
 
