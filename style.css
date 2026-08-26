@@ -353,7 +353,7 @@ header{
 
 #menu_mobile.ativo{
     display: flex;
-    
+
 }
 
 
@@ -362,10 +362,12 @@ header{
     position: absolute;
     top:105px;
     left:0;
-    width: 70%;
+    width: 80%;
     height:100vh;
     flex-direction: column;
-    padding-top: 77px; 
+    padding-top: 77px;
+    transition:1.5s; /* Não funciona ou não sei onde por*/
+
 /* 
 ul = afetou o grupo menu 
 li a = afeta o espaço entre cada opção de menu
@@ -377,6 +379,7 @@ li a = afeta o espaço entre cada opção de menu
 
 #menu_mobile li a{ /* Estética das letras | padding vai afetar a palavra isolada */
     color: white;
+    
 }
 
 #menu_mobile li a:hover{
