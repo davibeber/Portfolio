@@ -9,6 +9,7 @@
 
 }
 
+
 html {
     scroll-behavior: smooth;
 }
@@ -81,6 +82,9 @@ simplesmente ser desativadas se depender de uma ação apenas*/
 body{ /* comandos gerais de estética do site */
     background-color: #0A1024;
     color: aliceblue;
+
+    font-family: "Roboto", sans-serif;
+
 }
 
 .secao_1{

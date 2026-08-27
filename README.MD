@@ -2,6 +2,7 @@
 
 Link: https://davibeber.github.io/Portifolio/
 
+Para ver todas as atualizações e notas de versão, consulte o [CHANGELOG.md]
 
 ![Static Badge](https://img.shields.io/badge/Status-Melhoria_Cont%C3%ADnua-orange?style=for-the-badge&logo=git&logoColor=white&labelColor=black)
 
