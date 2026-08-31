@@ -281,10 +281,47 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
 }
 
-.secao_4 p{
-    font-size: 3rem;
-    text-align: left;
+
+.carrossel_container{
+    width: 100%;
+    max-width: 1100px;
+    border: 2px solid rgb(255, 200, 0);
+    border-radius: 6px;
+    
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; 
+    /* A imagem é forçada a deslizar sozinha e ficar centralizada. estéticamente util */
+    
+    scroll-behavior: smooth;
+   
+
 }
+
+
+.carrossel_track{
+    display: flex;
+}
+
+
+.carrossel_track img{
+    width: 100%;
+    aspect-ratio: 16/9; /* Padrao universal para monitores */
+    object-fit: cover;
+    flex-shrink: 0; /* Nao entendi como de fato funciona*/
+
+    scroll-snap-align: center;
+/* A diferença é sutil mas funciona quando start ou end é usado (ou eu to errado)*/    
+
+}
+
+.carrossel_container::-webkit-scrollbar{
+    height:1px;
+}   
+
+
+
+
+
 
 footer{
     color: aliceblue;
@@ -553,6 +590,27 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     text-align: left;
     margin:3rem;
 }
+
+
+
+
+.carrossel_container{
+    width: 100%;
+    max-width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 footer{
