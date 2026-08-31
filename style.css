@@ -319,10 +319,6 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 }   
 
 
-
-
-
-
 footer{
     color: aliceblue;
     font-size: 20px;
@@ -595,7 +591,6 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
 
 .carrossel_container{
-    width: 100%;
     max-width: 400px;
     border: 2px solid rgb(255, 200, 0);
     border-radius: 6px;
@@ -609,13 +604,6 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 }
 
 
-.carousel-container {
-    scrollbar-width: none; /* Esconde no Firefox */
-}
-
-.carousel-container::-webkit-scrollbar {
-    display: none; /* Esconde no Chrome/Edge/Safari mobile */
-}
 
 .carrossel_track{
     display: flex;
@@ -625,7 +613,25 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 .carrossel_track img{
     max-width: 100%;
     aspect-ratio: 16/9;
+    object-fit: cover;
+    flex-shrink: 0; /* Nao entendi como de fato funciona*/
+
+    scroll-snap-align: center;
+/* A diferença é sutil mas funciona quando start ou end é usado (ou eu to errado)*/    
+
 }
+
+
+/* Esconde a barra de rolagem mantendo a funcionalidade de arrastar */
+.carrossel-container{
+  scrollbar-width: none;          /* Esconde no Firefox e navegadores modernos */
+  -ms-overflow-style: none;       /* Esconde no Internet Explorer / Edge antigo */
+}
+
+.carrossel-container::-webkit-scrollbar{
+    display: none; /* Esconde no Chrome/Edge/Safari mobile */
+}
+
 
 
 footer{
