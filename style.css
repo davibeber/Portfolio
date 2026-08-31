@@ -596,21 +596,36 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
 .carrossel_container{
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
+    border: 2px solid rgb(255, 200, 0);
+    border-radius: 6px;
+    
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; 
+    /* A imagem é forçada a deslizar sozinha e ficar centralizada. estéticamente util */
+    
+    scroll-behavior: smooth;
+
 }
 
 
+.carousel-container {
+    scrollbar-width: none; /* Esconde no Firefox */
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Esconde no Chrome/Edge/Safari mobile */
+}
+
+.carrossel_track{
+    display: flex;
+}
 
 
-
-
-
-
-
-
-
-
-
+.carrossel_track img{
+    max-width: 100%;
+    aspect-ratio: 16/9;
+}
 
 
 footer{
