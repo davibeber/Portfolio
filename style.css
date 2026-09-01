@@ -282,10 +282,11 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 }
 
 .secao_4 h3{
-    font-size: 80px;
+    font-size: 60px;
     padding: 60px;
-    text-align: left;
 
+    color: #f2cb3d;
+    
 }
 
 
@@ -377,6 +378,56 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 /* A diferença é sutil mas funciona quando start ou end é usado (ou eu to errado)*/    
 
 }
+
+/* Percebi que deveria centralizar o tamanho de textos com p com um unico p{} */
+/* Resolver isso dps quando possivel */
+
+/*
+pensando em como centralizar comandos
+p{
+font-size: 20px;
+text-wrap: pretty; 
+hyphens: auto;
+text-indent: 30px;
+text-align: left;
+
+}
+
+*/
+
+.sw_descricao{
+    max-width: 1100px;
+    padding-top: 60px;
+    
+}
+
+.sw_descricao h4{
+    font-size: 45px;
+    padding-bottom: 40px;
+}
+
+.sw_descricao p{
+    font-size: 25px;
+    text-align: left;
+    text-indent: 60px;
+    max-width: 1800px;
+    padding-bottom: 40px;
+    text-wrap: pretty; /* Garante que o texto seja quebrado de forma adequada */
+    hyphens: auto; /* Permite a quebra de palavras com hífen */
+}
+
+.sw_descricao ul{
+    font-size: 25px;
+    padding-left: 40px;
+    max-width: 1800px;
+}
+
+
+
+
+
+
+
 
 footer{
     color: aliceblue;
