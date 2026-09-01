@@ -7,6 +7,8 @@
 
     /*outline: 1px solid red; */
 
+    
+
 }
 
 
@@ -23,7 +25,7 @@ section {
 
 
 header{ /* Topo, a estética geral do menu principal */
-    background-color: #0066FF;
+    background-color: #565eb6f8;
     padding: 5px 4%; 
     display: flex;
     justify-content: center;
@@ -41,11 +43,12 @@ nav ul{ /* estética, alinhamento e espaçamento das opções ao redor delas*/
     padding:30px;
     gap: 50px;
     display: flex;
+    
 
 }
 
 nav ul li a{ /* estetica das palavras em si no menu */
-    color: #0A1024;
+    color: #282a2f;
     text-decoration: none; /* retira o sublinhado do link */
     font-size: 20px;
     font-weight: bold; /* bold = deixa o texto em negrito */
@@ -60,7 +63,7 @@ nav ul li a{ /* estetica das palavras em si no menu */
 }
 
 #menu li a:hover{ /* quando passar o cursor em cima do menu */
-    color: #3DF2E0;
+    color: #e7ba8e;
     transform: scale(1.2);
 }
 
@@ -80,10 +83,11 @@ simplesmente ser desativadas se depender de uma ação apenas*/
 
 
 body{ /* comandos gerais de estética do site */
-    background-color: #0A1024;
+    background-color: #0f1235;
     color: aliceblue;
 
     font-family: "Roboto", sans-serif;
+
 
 }
 
@@ -99,10 +103,12 @@ body{ /* comandos gerais de estética do site */
 
     margin-bottom: 10rem;
 
+    /* Duas luzes circulares desfocadas nas pontas superior e inferior */
+ 
 }
 
 .secao_1 h1{ 
-    color:#3DF2E0;
+    color:#e7ba8e;
     font-size: 70px;
 } 
 
@@ -168,7 +174,7 @@ body{ /* comandos gerais de estética do site */
 .foto_perfil{ /* funcionou */
     width: 300px; /* Define a largura da imagem */
     height: auto; /* Mantém a proporção da imagem */
-    border: 5px double #3DF2E0;
+    border: 5px double #F5DABF;
 /*
 Hà variações de border que achei melhor não esquecer:
 none,solid, double, dashed,dotted,groove,ridge,inset e outset
@@ -197,7 +203,7 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
 .secao_2 h2{ 
     font-size: 3rem;
-    color: #3DF2E0;
+    color: #F5DABF;
     margin-left: 0rem;
     margin-bottom: 0rem;
    
@@ -228,7 +234,7 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
 .secao_3 h2{
     font-size: 3rem;
-    color:#3DF2E0;
+    color:#F5DABF;
     margin-left: 0rem;
     margin-bottom: 0rem;
    
@@ -276,7 +282,7 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
 .secao_4 h2{
     font-size: 3rem;
-    color:#3DF2E0;
+    color:#F5DABF;
     padding-bottom: 10rem;
 
 }
