@@ -355,6 +355,7 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     /* A imagem é forçada a deslizar sozinha e ficar centralizada. estéticamente util */
     
     scroll-behavior: smooth;
+    scrollbar-width: none;   /* Esconde o scroll de barra lateral das imagens */
    
 
 }
@@ -371,15 +372,11 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     object-fit: cover;
     flex-shrink: 0; /* Nao entendi como de fato funciona*/
 
+    scroll-behavior: smooth;
     scroll-snap-align: center;
 /* A diferença é sutil mas funciona quando start ou end é usado (ou eu to errado)*/    
 
 }
-
-.carrossel_container::-webkit-scrollbar{
-    height:1px;
-}   
-
 
 footer{
     color: aliceblue;
