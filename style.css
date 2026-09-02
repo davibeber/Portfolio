@@ -281,7 +281,7 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 }
 
 .secao_4 h2{
-    font-size: 3rem;
+    font-size: 4rem;
     color:#F5DABF;
     padding-bottom: 10rem;
 
@@ -289,12 +289,23 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
 .secao_4 h3{
     font-size: 60px;
-    padding: 60px;
+    padding: 30px;
 
     color: #f2cb3d;
     
 }
 
+.secao_4 h4{
+    font-size: 30px;
+    padding: 30px;
+    color: #f2cb3d;
+}
+
+.secao_4 p{
+    font-size: 20px;
+    text-align: left;
+    margin:3rem;
+}
 
 .container_1{
     position: relative;
@@ -407,7 +418,7 @@ text-align: left;
     
 }
 
-.sw_descricao h4{
+.sw_descricao h5{
     font-size: 45px;
     padding-bottom: 40px;
 }
@@ -422,12 +433,15 @@ text-align: left;
     hyphens: auto; /* Permite a quebra de palavras com hífen */
 }
 
+/*
+Tive problemas na versao mobile para centralizar o texto e a lista.
+
 .sw_descricao ul{
     font-size: 25px;
     padding-left: 40px;
     max-width: 1800px;
 }
-
+*/
 
 
 
@@ -448,18 +462,18 @@ footer{
 html, body {
     width: 100%;
     max-width: 100%;
-    margin: 0;
+    margin: 0px;
     box-sizing:border-box;
     scroll-behavior: smooth;
 }
 
 
 header{
-    background-color: #0A1024;
+    background-color: #565eb6f8;
     padding: 20px 4%;
     display: flex;
     justify-content: start;
-    border-bottom:2px solid #3DF2E0 ;
+    border-bottom:2px solid #e7ba8e ;
     
     position: sticky;
     top: 0; /* menu fixo no topo*/
@@ -474,8 +488,8 @@ header{
 #btn{
     display: flex;
     background:transparent;
-    color: rgba(10, 222, 222, 0.427);
-    border: 2px solid rgba(0, 255, 255, 0.386);
+    color: #e7ba8e;
+    border: 2px solid #e7ba8e;
     padding: 10px 10px;
     cursor: pointer;
 }
@@ -505,7 +519,7 @@ header{
     left:0;
     width: 80%;
     height:100vh;
-    background-color: rgba(0, 0, 0, 0.393);
+    background-color: rgba(0, 0, 0, 0.466);
 
     z-index: 99;
 
@@ -548,7 +562,7 @@ li a = afeta o espaço entre cada opção de menu
 }
 
 #menu_mobile li a:hover{
-    background-color: rgba(0, 255, 255, 0.381);
+    background-color: #e7ba8e;
     display: block;
     color: black;
 
@@ -556,6 +570,14 @@ li a = afeta o espaço entre cada opção de menu
 
 
 
+body{ /* comandos gerais de estética do site */
+    background-color: #0d0f2d;
+    color: aliceblue;
+
+    font-family: "Roboto", sans-serif;
+
+
+}
 
 
 .secao_1{
@@ -570,21 +592,22 @@ li a = afeta o espaço entre cada opção de menu
 }
 
 .secao_1 h1{ /* Nome em destaque */
-    color:#3DF2E0;
+    color:#e7ba8e;
     font-size: 32px;
 }
 
 
 .foto_perfil{ /* funcionou */
-    width: 9rem; /* Define a largura da imagem */
-    height: 10rem; /* Mantém a proporção da imagem */
-    border: 5px double #3DF2E0;
+    width: 8rem; /* Define a largura da imagem */
+    height: 9rem; /* Mantém a proporção da imagem */
+    border: 5px double #e7ba8e;
 /*
 Hà variações de border que achei melhor não esquecer:
 none,solid, double, dashed,dotted,groove,ridge,inset e outset
 */
-    border-radius: 5%; /* Deixa a imagem redonda */
+    border-radius: 10%; /* Deixa a imagem redonda */
     margin-left: 0px;
+    animation: none;
 }
 
 
@@ -692,10 +715,26 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
 
 .secao_4 h2{
-    font-size: 2rem;
-    color:#3DF2E0;
+    font-size: 3rem;
+    color:#e7ba8e;
     padding-bottom: 2rem;
 }
+
+.secao_4 h3{
+    font-size: 3rem;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    color: #f3f1ef;
+    
+}
+
+
+.secao_4 h4{
+    font-size: 20px;
+    padding: 20px;
+    color: #f3f1ef;
+}
+
 
 .secao_4 p{
     font-size: 2rem;
@@ -719,6 +758,10 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
 }
 
+
+#btnleft, #btnright {
+    display: none;
+}
 
 
 .carrossel_track{
@@ -749,6 +792,46 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 }
 
 
+
+
+
+.sw_descricao{
+    max-width: 760px; /* Revisar */
+    padding-top: 10px;
+    
+}
+
+.sw_descricao h5{
+    font-size: 30px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+
+
+.sw_descricao p{
+    font-size: 25px;
+    text-align: left;
+    text-indent: 30px;
+    max-width: 3000px;
+    padding-bottom: 0px;
+    text-wrap: pretty; /* Garante que o texto seja quebrado de forma adequada */
+    hyphens: auto; /* Permite a quebra de palavras com hífen */
+}
+
+/*
+Tive problemas na versao mobile para centralizar o texto e a lista.
+.sw_descricao ul{
+    font-size: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 1800px;
+    text-wrap: pretty; 
+    hyphens: auto; 
+    text-indent: 30px;
+
+}
+*/
 
 footer{
     color: aliceblue;
