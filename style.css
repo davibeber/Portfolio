@@ -302,10 +302,8 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     color: #f6f5f2;
 }
 
-.secao_4 p{
-    font-size: 20px;
-    text-align: left;
-    margin:3rem;
+#deslize-instrucao{
+    display: none;
 }
 
 .container_1{
@@ -413,6 +411,9 @@ text-align: left;
 
 */
 
+
+
+
 .sw_descricao{
     max-width: 1100px;
     padding-top: 60px;
@@ -427,7 +428,7 @@ text-align: left;
 .sw_descricao p{
     font-size: 25px;
     text-align: left;
-    text-indent: 60px;
+    text-indent: 0px;
     max-width: 1800px;
     padding-bottom: 40px;
     text-wrap: pretty; /* Garante que o texto seja quebrado de forma adequada */
@@ -740,12 +741,12 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     color: #f3f1ef;
 }
 
-
-.secao_4 p{
-    font-size: 2rem;
-    text-align: left;
-    margin:3rem;
+#deslize-instrucao{
+    display: block;
+    font-size: 1.5rem;
+    color: #f3f1ef;
 }
+
 
 
 
@@ -815,6 +816,7 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
 
 .sw_descricao p{
+    margin:2rem;
     font-size: 25px;
     text-align: left;
     text-indent: 30px;
@@ -822,6 +824,8 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     padding-bottom: 0px;
     text-wrap: pretty; /* Garante que o texto seja quebrado de forma adequada */
     hyphens: auto; /* Permite a quebra de palavras com hífen */
+
+
 }
 
 /*
