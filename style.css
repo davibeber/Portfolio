@@ -1,27 +1,15 @@
 
-
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;    
-
-    /*outline: 1px solid red; */
-
-    
-
 }
 
+html { scroll-behavior: smooth; }
 
-html {
-    scroll-behavior: smooth;
-}
-/* Faz a tela deslizar suavemente até a seção em vez de dar um pulo seco */
+section { scroll-margin-top: 200px; } /* A melhor escolha dentro dos testes*/
 
-section {
-    scroll-margin-top: 200px; /* A escolha de 200px foi em tentativa e erro */
-}
-
-/* tela do dispositivo | margin | border | padding | (texto/imagem)*/
+/* tela do dispositivo | margin | border | padding | (texto/imagem) */
 
 
 header{ /* Topo, a estética geral do menu principal */
@@ -30,21 +18,17 @@ header{ /* Topo, a estética geral do menu principal */
     display: flex;
     justify-content: center;
     align-items: center;
-
     position: sticky;
-    top: 0px; /* menu fixo no topo*/
-    z-index: 9999;/* valor alto garante que a camada fique fixa no topo e não seja perdida*/
-
+    top: 0px; /* menu fixo no topo */
+    z-index: 9999;/* valor alto garante que a camada fique fixa no topo e não seja perdida */
 }
 
-nav ul{ /* estética, alinhamento e espaçamento das opções ao redor delas*/
-    list-style:none; /* muda a estética dos pontos do lado de listas*/
+nav ul{ /* estética, alinhamento e espaçamento das opções ao redor delas */
+    list-style:none; /* muda a estética dos pontos do lado de listas */
     margin:0px auto; 
     padding:30px;
     gap: 50px;
     display: flex;
-    
-
 }
 
 nav ul li a{ /* estetica das palavras em si no menu */
@@ -56,39 +40,26 @@ nav ul li a{ /* estetica das palavras em si no menu */
     display:inline-block ; /* links precisam disso para aceitar o transform*/
 }
 
-
 .navbar{
     display: flex;
     flex-direction: row;
 }
 
-#menu li a:hover{ /* quando passar o cursor em cima do menu */
+#menu li a:hover{ 
     color: #e7ba8e;
     transform: scale(1.2);
 }
 
+#btn{ display: none; } /* O elemento e suas funções não são carregadas*/
 
 
-#btn{
-    display: none;
-/* Essa função não faz com que o elemento fique invisivel ou intangivel,
-o elemento simplesmente não é carregado, o que faz com que determinadas funções no JS possam
-simplesmente ser desativadas se depender de uma ação apenas*/
-}
-
-
-#menu_mobile{
-    display: none;
-}
+#menu_mobile{ display: none; }
 
 
 body{ /* comandos gerais de estética do site */
     background-color: #0f1235;
     color: aliceblue;
-
     font-family: "Roboto", sans-serif;
-
-
 }
 
 .secao_1{
@@ -100,11 +71,7 @@ body{ /* comandos gerais de estética do site */
     font-size: 3rem;
     padding-top: 10rem;
     padding-bottom: 6rem;
-
-    margin-bottom: 10rem;
-
-    /* Duas luzes circulares desfocadas nas pontas superior e inferior */
- 
+    margin-bottom: 10rem; 
 }
 
 .secao_1 span{ 
@@ -113,9 +80,7 @@ body{ /* comandos gerais de estética do site */
     font-weight: bold;
 } 
 
-.secao_1 p{ 
-    text-align: left;
-}
+.secao_1 p{ text-align: left; }
 
 .logo-inicio{
     display: flex;
@@ -125,7 +90,6 @@ body{ /* comandos gerais de estética do site */
 .logo-inicio a{
     text-decoration: none;
     padding: 12px;   
-
     display: inline-flex; 
     align-items: center;
     justify-content: center;
@@ -137,7 +101,6 @@ body{ /* comandos gerais de estética do site */
     width:45px;
     height: 45px; /* É bom definir a altura para manter a proporção */
     fill:white;
-
     margin: 0;
     transition: transform 0.3s ease-in-out;
     transform-origin: center center;
@@ -148,19 +111,15 @@ body{ /* comandos gerais de estética do site */
     transform: scale(1.2);
 }
 
-
 #in{
     fill:rgb(36, 36, 224);
     background-color: #ffffff;
     border-radius: 4px;
 }
 
-#gh{
-    fill:white;
-}
-#wpp{
-    fill:rgb(0, 209, 140);
-}
+#gh{ fill:white; }
+
+#wpp{ fill:rgb(0, 209, 140); }
 
 
 @keyframes flutuar {
@@ -172,27 +131,15 @@ body{ /* comandos gerais de estética do site */
     }
 }
 
-.foto_perfil{ /* funcionou */
-    width: 300px; /* Define a largura da imagem */
-    height: auto; /* Mantém a proporção da imagem */
+.foto_perfil{
+    width: 300px; 
+    height: auto; 
     border: 5px double #F5DABF;
-/*
-Hà variações de border que achei melhor não esquecer:
-none,solid, double, dashed,dotted,groove,ridge,inset e outset
-*/
-
-    border-radius: 5%; /* Deixa a imagem redonda */
+    border-radius: 5%;
     margin-left: 0px;
     position:relative;
     animation: flutuar 2s ease-in-out infinite alternate;
 }
-
-
-
-
-
-
-
 
 .secao_2{
     display: flex;
@@ -207,7 +154,6 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     color: #e7ba8e;
     margin-left: 0rem;
     margin-bottom: 0rem;
-   
 }
 
 
@@ -219,13 +165,9 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     text-indent: 30px;
 }
 
-
-
-
 .secao_3{
     display: flex;
     flex-direction: column;
-
     align-items: center;
     gap: 50px;
     margin-left:10rem;
@@ -238,7 +180,6 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     color: #e7ba8e;
     margin-left: 0rem;
     margin-bottom: 0rem;
-   
 }
 
 
@@ -267,7 +208,6 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     gap: 5px;
     align-items:baseline;
     font-size: 1.25rem;
-
     max-width: 75rem;
 }
 
@@ -291,9 +231,7 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 .secao_4 h3{
     font-size: 60px;
     padding: 20px;
-
     color: #f4f4f3;
-    
 }
 
 .secao_4 h4{
@@ -302,9 +240,7 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     color: #f6f5f2;
 }
 
-#deslize-instrucao{
-    display: none;
-}
+#deslize-instrucao{ display: none; }
 
 .container_1{
     position: relative;
@@ -315,13 +251,12 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 .carrossel_container{
     display: flex;
     overflow-x: auto;
-    scroll-behavior: smooth; /* Garante que a rolagem do JS seja macia */
+    scroll-behavior: smooth; 
     scroll-snap-type: x mandatory; /* Trava a foto no meio */
     width: 100%;
 }
 
 #btnleft, #btnright {
-    
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -337,17 +272,16 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 #btnright { right: 10px; }
 
 #btnleft svg {
-    fill:orange;
+    fill:rgb(255, 179, 0);
     width: 80px;
     height: 80px;
 }
 
 #btnright svg {
-    fill:orange;
+    fill:rgb(255, 179, 0);
     width: 80px;
     height: 80px;
 }
-
 
 .container_1{
     display: flex;
@@ -364,7 +298,7 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 .carrossel_container{
     width: 100%;
     max-width: 1100px;
-    border: 2px solid rgb(255, 200, 0);
+    border: 5px solid rgb(255, 179, 0);
     border-radius: 6px;
     
     overflow-x: auto;
@@ -374,50 +308,26 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     scroll-behavior: smooth;
     scrollbar-width: none;   /* Esconde o scroll de barra lateral das imagens */
    
-
 }
-
 
 .carrossel_track{
     display: flex;
 }
-
 
 .carrossel_track img{
     width: 100%;
     aspect-ratio: 16/9; /* Padrao universal para monitores */
     object-fit: cover;
     flex-shrink: 0; /* Nao entendi como de fato funciona*/
-
     scroll-behavior: smooth;
     scroll-snap-align: center;
 /* A diferença é sutil mas funciona quando start ou end é usado (ou eu to errado)*/    
 
 }
 
-/* Percebi que deveria centralizar o tamanho de textos com p com um unico p{} */
-/* Resolver isso dps quando possivel */
-
-/*
-pensando em como centralizar comandos
-p{
-font-size: 20px;
-text-wrap: pretty; 
-hyphens: auto;
-text-indent: 30px;
-text-align: left;
-
-}
-
-*/
-
-
-
-
 .sw_descricao{
     max-width: 1100px;
     padding-top: 60px;
-    
 }
 
 .sw_descricao h5{
@@ -444,12 +354,6 @@ Tive problemas na versao mobile para centralizar o texto e a lista.
     max-width: 1800px;
 }
 */
-
-
-
-
-
-
 
 footer{
     color: aliceblue;
@@ -545,9 +449,10 @@ header{
     display: flex;
     flex-direction: column;
     padding-top: 77px;
-    transition:1.5s; /* Não funciona ou não sei onde por*/
-    gap: 25px; /* Espaçamento entre cada opção do menu */
+    transition:1.5s;
+    gap: 25px; 
     width: 100%;
+
 /* 
 ul = afetou o grupo menu 
 li a = afeta o espaço entre cada opção de menu
@@ -567,20 +472,13 @@ li a = afeta o espaço entre cada opção de menu
     background-color: #e7ba8e;
     display: block;
     color: black;
-
 }
-
-
 
 body{ /* comandos gerais de estética do site */
     background-color: #0d0f2d;
     color: aliceblue;
-
     font-family: "Roboto", sans-serif;
-
-
 }
-
 
 .secao_1{
     display:flex;
@@ -599,26 +497,19 @@ body{ /* comandos gerais de estética do site */
 }
 
 
-.foto_perfil{ /* funcionou */
-    width: 9rem; /* Define a largura da imagem */
-    height: 9rem; /* Mantém a proporção da imagem */
+.foto_perfil{
+    width: 9rem; 
+    height: 9rem; 
     border: 5px double #e7ba8e;
-/*
-Hà variações de border que achei melhor não esquecer:
-none,solid, double, dashed,dotted,groove,ridge,inset e outset
-*/
-    border-radius: 10%; /* Deixa a imagem redonda */
+    border-radius: 10%;
     margin-top: 50px;
     margin-left: 0px;
     animation: none;
 }
 
-
-
 .secao_2{
     display: flex;
     flex-direction: column;
-
     align-items: center;
     margin: 15px;
     padding: 1rem;
@@ -626,16 +517,13 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     max-width: 90%;
 }
 
-
 .sobre h2{
     font-size: 3rem;
     color: #e7ba8e;
     padding: 0px;
     margin-left: 0rem;
     margin-bottom: 0rem;
-
 }
-
 
 .secao_2 div p{
 
@@ -643,19 +531,14 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     line-height: 1.3; /* Deixa do jeito que tá*/
     text-align: left;
     text-indent: 30px;
-
     hyphens: auto; /* Permite a quebra de palavras com hífen */
     -webkit-hyphens: auto; /* Suporte para navegadores mais antigos/Safari */
     text-wrap: pretty; /* Garante que o texto seja quebrado de forma adequada */
 }
 
-
-
-
 .secao_3{
     display: flex;
     flex-direction: column;
-
     align-items: center;
     gap: 2rem;
     margin-left: 1rem;
@@ -668,7 +551,6 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     margin-left: 0;
     color: #e7ba8e;
 }
-
 
 .secao_3 ul li{
     display: flex;
@@ -684,13 +566,11 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     margin: 10px;
 }
 
-
 #gh_habilidades{
     width:6rem;
     height:8rem;
     margin:5px;
 }
-
 
 .info{
     display: flex;
@@ -699,16 +579,10 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     align-items:baseline;
     font-size: 1.20rem;
     max-width: 75rem;
-
     hyphens: auto;
     -webkit-hyphens: auto; /* Suporte para navegadores mais antigos/Safari */
     text-wrap: pretty; /* Garante que o texto seja quebrado de forma adequada */
 }
-
-
-
-
-
 
 .secao_4{
     display: flex;
@@ -718,7 +592,6 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     margin-top:2rem;
     gap: 2rem;
 }
-
 
 .secao_4 h2{
     font-size: 3rem;
@@ -734,7 +607,6 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     
 }
 
-
 .secao_4 h4{
     font-size: 20px;
     padding: 20px;
@@ -743,12 +615,9 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
 #deslize-instrucao{
     display: block;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #f3f1ef;
 }
-
-
-
 
 .carrossel_container{
     max-width: 100%;
@@ -759,20 +628,12 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     overflow-x: auto;
     scroll-snap-type: x mandatory; 
     /* A imagem é forçada a deslizar sozinha e ficar centralizada. estéticamente util */
-    
     scroll-behavior: smooth;
-
 }
 
+#btnleft, #btnright { display: none; }
 
-#btnleft, #btnright {
-    display: none;
-}
-
-
-.carrossel_track{
-    display: flex;
-}
+.carrossel_track{ display: flex; }
 
 
 .carrossel_track img{
@@ -783,9 +644,7 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
     scroll-snap-align: center;
 /* A diferença é sutil mas funciona quando start ou end é usado (ou eu to errado)*/    
-
 }
-
 
 /* Esconde a barra de rolagem mantendo a funcionalidade de arrastar */
 .carrossel-container{
@@ -797,14 +656,9 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     display: none; /* Esconde no Chrome/Edge/Safari mobile */
 }
 
-
-
-
-
 .sw_descricao{
     max-width: 760px; /* Revisar */
     padding-top: 10px;
-    
 }
 
 .sw_descricao h5{
@@ -812,8 +666,6 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     padding-bottom: 40px;
     text-align: center;
 }
-
-
 
 .sw_descricao p{
     margin:2rem;
@@ -824,8 +676,6 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     padding-bottom: 0px;
     text-wrap: pretty; /* Garante que o texto seja quebrado de forma adequada */
     hyphens: auto; /* Permite a quebra de palavras com hífen */
-
-
 }
 
 /*
