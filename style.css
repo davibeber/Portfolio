@@ -107,9 +107,10 @@ body{ /* comandos gerais de estética do site */
  
 }
 
-.secao_1 h1{ 
+.secao_1 span{ 
     color:#e7ba8e;
-    font-size: 70px;
+    font-size: 60px;
+    font-weight: bold;
 } 
 
 .secao_1 p{ 
@@ -203,7 +204,7 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
 .secao_2 h2{ 
     font-size: 3rem;
-    color: #F5DABF;
+    color: #e7ba8e;
     margin-left: 0rem;
     margin-bottom: 0rem;
    
@@ -234,7 +235,7 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
 .secao_3 h2{
     font-size: 3rem;
-    color:#F5DABF;
+    color: #e7ba8e;
     margin-left: 0rem;
     margin-bottom: 0rem;
    
@@ -282,23 +283,23 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
 .secao_4 h2{
     font-size: 4rem;
-    color:#F5DABF;
-    padding-bottom: 10rem;
+    color:#e7ba8e;
+    padding-bottom: 5rem;
 
 }
 
 .secao_4 h3{
     font-size: 60px;
-    padding: 30px;
+    padding: 20px;
 
-    color: #f2cb3d;
+    color: #f4f4f3;
     
 }
 
 .secao_4 h4{
     font-size: 30px;
     padding: 30px;
-    color: #f2cb3d;
+    color: #f6f5f2;
 }
 
 .secao_4 p{
@@ -591,14 +592,14 @@ body{ /* comandos gerais de estética do site */
     margin-left: 0;
 }
 
-.secao_1 h1{ /* Nome em destaque */
+.secao_1 span{ /* Nome em destaque */
     color:#e7ba8e;
-    font-size: 32px;
+    font-size: 40px;
 }
 
 
 .foto_perfil{ /* funcionou */
-    width: 8rem; /* Define a largura da imagem */
+    width: 9rem; /* Define a largura da imagem */
     height: 9rem; /* Mantém a proporção da imagem */
     border: 5px double #e7ba8e;
 /*
@@ -606,6 +607,7 @@ Hà variações de border que achei melhor não esquecer:
 none,solid, double, dashed,dotted,groove,ridge,inset e outset
 */
     border-radius: 10%; /* Deixa a imagem redonda */
+    margin-top: 50px;
     margin-left: 0px;
     animation: none;
 }
@@ -626,9 +628,11 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
 .sobre h2{
     font-size: 3rem;
+    color: #e7ba8e;
     padding: 0px;
     margin-left: 0rem;
     margin-bottom: 0rem;
+
 }
 
 
@@ -659,8 +663,9 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 }
 
 .secao_3 h2{
-    font-size: 30px;
+    font-size: 3rem;
     margin-left: 0;
+    color: #e7ba8e;
 }
 
 
