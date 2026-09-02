@@ -7,6 +7,8 @@
 
     /*outline: 1px solid red; */
 
+    
+
 }
 
 
@@ -23,7 +25,7 @@ section {
 
 
 header{ /* Topo, a estética geral do menu principal */
-    background-color: #0066FF;
+    background-color: #565eb6f8;
     padding: 5px 4%; 
     display: flex;
     justify-content: center;
@@ -41,11 +43,12 @@ nav ul{ /* estética, alinhamento e espaçamento das opções ao redor delas*/
     padding:30px;
     gap: 50px;
     display: flex;
+    
 
 }
 
 nav ul li a{ /* estetica das palavras em si no menu */
-    color: #0A1024;
+    color: #282a2f;
     text-decoration: none; /* retira o sublinhado do link */
     font-size: 20px;
     font-weight: bold; /* bold = deixa o texto em negrito */
@@ -60,7 +63,7 @@ nav ul li a{ /* estetica das palavras em si no menu */
 }
 
 #menu li a:hover{ /* quando passar o cursor em cima do menu */
-    color: #3DF2E0;
+    color: #e7ba8e;
     transform: scale(1.2);
 }
 
@@ -80,10 +83,11 @@ simplesmente ser desativadas se depender de uma ação apenas*/
 
 
 body{ /* comandos gerais de estética do site */
-    background-color: #0A1024;
+    background-color: #0f1235;
     color: aliceblue;
 
     font-family: "Roboto", sans-serif;
+
 
 }
 
@@ -99,11 +103,14 @@ body{ /* comandos gerais de estética do site */
 
     margin-bottom: 10rem;
 
+    /* Duas luzes circulares desfocadas nas pontas superior e inferior */
+ 
 }
 
-.secao_1 h1{ 
-    color:#3DF2E0;
-    font-size: 70px;
+.secao_1 span{ 
+    color:#e7ba8e;
+    font-size: 60px;
+    font-weight: bold;
 } 
 
 .secao_1 p{ 
@@ -168,7 +175,7 @@ body{ /* comandos gerais de estética do site */
 .foto_perfil{ /* funcionou */
     width: 300px; /* Define a largura da imagem */
     height: auto; /* Mantém a proporção da imagem */
-    border: 5px double #3DF2E0;
+    border: 5px double #F5DABF;
 /*
 Hà variações de border que achei melhor não esquecer:
 none,solid, double, dashed,dotted,groove,ridge,inset e outset
@@ -197,7 +204,7 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
 .secao_2 h2{ 
     font-size: 3rem;
-    color: #3DF2E0;
+    color: #e7ba8e;
     margin-left: 0rem;
     margin-bottom: 0rem;
    
@@ -228,7 +235,7 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
 .secao_3 h2{
     font-size: 3rem;
-    color:#3DF2E0;
+    color: #e7ba8e;
     margin-left: 0rem;
     margin-bottom: 0rem;
    
@@ -275,16 +282,173 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 }
 
 .secao_4 h2{
-    font-size: 3rem;
-    color:#3DF2E0;
-    padding-bottom: 10rem;
+    font-size: 4rem;
+    color:#e7ba8e;
+    padding-bottom: 5rem;
 
+}
+
+.secao_4 h3{
+    font-size: 60px;
+    padding: 20px;
+
+    color: #f4f4f3;
+    
+}
+
+.secao_4 h4{
+    font-size: 30px;
+    padding: 30px;
+    color: #f6f5f2;
 }
 
 .secao_4 p{
-    font-size: 3rem;
+    font-size: 20px;
     text-align: left;
+    margin:3rem;
 }
+
+.container_1{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.carrossel_container{
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth; /* Garante que a rolagem do JS seja macia */
+    scroll-snap-type: x mandatory; /* Trava a foto no meio */
+    width: 100%;
+}
+
+#btnleft, #btnright {
+    
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: transparent;
+  color: white;
+  padding: 12px 16px;
+  cursor: pointer;
+  border:none;
+}
+
+#btnleft { left: 10px; }
+#btnright { right: 10px; }
+
+#btnleft svg {
+    fill:orange;
+    width: 80px;
+    height: 80px;
+}
+
+#btnright svg {
+    fill:orange;
+    width: 80px;
+    height: 80px;
+}
+
+
+.container_1{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    align-items: center;
+}
+
+.container_1 button{
+    width: 100px;
+    height: 100px;
+}
+
+.carrossel_container{
+    width: 100%;
+    max-width: 1100px;
+    border: 2px solid rgb(255, 200, 0);
+    border-radius: 6px;
+    
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; 
+    /* A imagem é forçada a deslizar sozinha e ficar centralizada. estéticamente util */
+    
+    scroll-behavior: smooth;
+    scrollbar-width: none;   /* Esconde o scroll de barra lateral das imagens */
+   
+
+}
+
+
+.carrossel_track{
+    display: flex;
+}
+
+
+.carrossel_track img{
+    width: 100%;
+    aspect-ratio: 16/9; /* Padrao universal para monitores */
+    object-fit: cover;
+    flex-shrink: 0; /* Nao entendi como de fato funciona*/
+
+    scroll-behavior: smooth;
+    scroll-snap-align: center;
+/* A diferença é sutil mas funciona quando start ou end é usado (ou eu to errado)*/    
+
+}
+
+/* Percebi que deveria centralizar o tamanho de textos com p com um unico p{} */
+/* Resolver isso dps quando possivel */
+
+/*
+pensando em como centralizar comandos
+p{
+font-size: 20px;
+text-wrap: pretty; 
+hyphens: auto;
+text-indent: 30px;
+text-align: left;
+
+}
+
+*/
+
+.sw_descricao{
+    max-width: 1100px;
+    padding-top: 60px;
+    
+}
+
+.sw_descricao h5{
+    font-size: 45px;
+    padding-bottom: 40px;
+}
+
+.sw_descricao p{
+    font-size: 25px;
+    text-align: left;
+    text-indent: 60px;
+    max-width: 1800px;
+    padding-bottom: 40px;
+    text-wrap: pretty; /* Garante que o texto seja quebrado de forma adequada */
+    hyphens: auto; /* Permite a quebra de palavras com hífen */
+}
+
+/*
+Tive problemas na versao mobile para centralizar o texto e a lista.
+
+.sw_descricao ul{
+    font-size: 25px;
+    padding-left: 40px;
+    max-width: 1800px;
+}
+*/
+
+
+
+
+
+
 
 footer{
     color: aliceblue;
@@ -299,18 +463,18 @@ footer{
 html, body {
     width: 100%;
     max-width: 100%;
-    margin: 0;
+    margin: 0px;
     box-sizing:border-box;
     scroll-behavior: smooth;
 }
 
 
 header{
-    background-color: #0A1024;
+    background-color: #565eb6f8;
     padding: 20px 4%;
     display: flex;
     justify-content: start;
-    border-bottom:2px solid #3DF2E0 ;
+    border-bottom:2px solid #e7ba8e ;
     
     position: sticky;
     top: 0; /* menu fixo no topo*/
@@ -325,8 +489,8 @@ header{
 #btn{
     display: flex;
     background:transparent;
-    color: rgba(10, 222, 222, 0.427);
-    border: 2px solid rgba(0, 255, 255, 0.386);
+    color: #e7ba8e;
+    border: 2px solid #e7ba8e;
     padding: 10px 10px;
     cursor: pointer;
 }
@@ -356,7 +520,7 @@ header{
     left:0;
     width: 80%;
     height:100vh;
-    background-color: rgba(0, 0, 0, 0.393);
+    background-color: rgba(0, 0, 0, 0.466);
 
     z-index: 99;
 
@@ -399,7 +563,7 @@ li a = afeta o espaço entre cada opção de menu
 }
 
 #menu_mobile li a:hover{
-    background-color: rgba(0, 255, 255, 0.381);
+    background-color: #e7ba8e;
     display: block;
     color: black;
 
@@ -407,6 +571,14 @@ li a = afeta o espaço entre cada opção de menu
 
 
 
+body{ /* comandos gerais de estética do site */
+    background-color: #0d0f2d;
+    color: aliceblue;
+
+    font-family: "Roboto", sans-serif;
+
+
+}
 
 
 .secao_1{
@@ -420,22 +592,24 @@ li a = afeta o espaço entre cada opção de menu
     margin-left: 0;
 }
 
-.secao_1 h1{ /* Nome em destaque */
-    color:#3DF2E0;
-    font-size: 32px;
+.secao_1 span{ /* Nome em destaque */
+    color:#e7ba8e;
+    font-size: 40px;
 }
 
 
 .foto_perfil{ /* funcionou */
     width: 9rem; /* Define a largura da imagem */
-    height: 10rem; /* Mantém a proporção da imagem */
-    border: 5px double #3DF2E0;
+    height: 9rem; /* Mantém a proporção da imagem */
+    border: 5px double #e7ba8e;
 /*
 Hà variações de border que achei melhor não esquecer:
 none,solid, double, dashed,dotted,groove,ridge,inset e outset
 */
-    border-radius: 5%; /* Deixa a imagem redonda */
+    border-radius: 10%; /* Deixa a imagem redonda */
+    margin-top: 50px;
     margin-left: 0px;
+    animation: none;
 }
 
 
@@ -454,9 +628,11 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
 .sobre h2{
     font-size: 3rem;
+    color: #e7ba8e;
     padding: 0px;
     margin-left: 0rem;
     margin-bottom: 0rem;
+
 }
 
 
@@ -487,8 +663,9 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 }
 
 .secao_3 h2{
-    font-size: 30px;
+    font-size: 3rem;
     margin-left: 0;
+    color: #e7ba8e;
 }
 
 
@@ -543,10 +720,26 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
 
 
 .secao_4 h2{
-    font-size: 2rem;
-    color:#3DF2E0;
+    font-size: 3rem;
+    color:#e7ba8e;
     padding-bottom: 2rem;
 }
+
+.secao_4 h3{
+    font-size: 3rem;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    color: #f3f1ef;
+    
+}
+
+
+.secao_4 h4{
+    font-size: 20px;
+    padding: 20px;
+    color: #f3f1ef;
+}
+
 
 .secao_4 p{
     font-size: 2rem;
@@ -554,6 +747,96 @@ none,solid, double, dashed,dotted,groove,ridge,inset e outset
     margin:3rem;
 }
 
+
+
+.carrossel_container{
+    max-width: 100%;
+    width: 380px;
+    border: 2px solid rgb(255, 200, 0);
+    border-radius: 6px;
+    
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; 
+    /* A imagem é forçada a deslizar sozinha e ficar centralizada. estéticamente util */
+    
+    scroll-behavior: smooth;
+
+}
+
+
+#btnleft, #btnright {
+    display: none;
+}
+
+
+.carrossel_track{
+    display: flex;
+}
+
+
+.carrossel_track img{
+    max-width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    flex-shrink: 0; /* Nao entendi como de fato funciona*/
+
+    scroll-snap-align: center;
+/* A diferença é sutil mas funciona quando start ou end é usado (ou eu to errado)*/    
+
+}
+
+
+/* Esconde a barra de rolagem mantendo a funcionalidade de arrastar */
+.carrossel-container{
+  scrollbar-width: none;          /* Esconde no Firefox e navegadores modernos */
+  -ms-overflow-style: none;       /* Esconde no Internet Explorer / Edge antigo */
+}
+
+.carrossel-container::-webkit-scrollbar{
+    display: none; /* Esconde no Chrome/Edge/Safari mobile */
+}
+
+
+
+
+
+.sw_descricao{
+    max-width: 760px; /* Revisar */
+    padding-top: 10px;
+    
+}
+
+.sw_descricao h5{
+    font-size: 30px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+
+
+.sw_descricao p{
+    font-size: 25px;
+    text-align: left;
+    text-indent: 30px;
+    max-width: 3000px;
+    padding-bottom: 0px;
+    text-wrap: pretty; /* Garante que o texto seja quebrado de forma adequada */
+    hyphens: auto; /* Permite a quebra de palavras com hífen */
+}
+
+/*
+Tive problemas na versao mobile para centralizar o texto e a lista.
+.sw_descricao ul{
+    font-size: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 1800px;
+    text-wrap: pretty; 
+    hyphens: auto; 
+    text-indent: 30px;
+
+}
+*/
 
 footer{
     color: aliceblue;
