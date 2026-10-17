@@ -18,9 +18,9 @@ Criei este portfólio para mostrar na prática minha evolução como estudante e
 - [x] - Linguagens e ferramentas conhecidas/mais usadas;
 - [x] - Projetos;
 - [x] - Adição do trabalho da faculdade (DEMO do jogo em python)
-- [x] Layout responsivo, adaptado para celular (considerei prioridade depois que o portifolio obteve uma estrutura minimamente aceitável)
-- [ ] Implementação de modo escuro/claro (Dark Mode)
-- [ ] Formulário de contato funcional (aprender tavlez com JS e implementar no portifolio)
+- [ ] - Layout responsivo, adaptado para celular (considerei prioridade depois que o portifolio obteve uma estrutura minimamente aceitável)
+- [ ] - Implementação de modo escuro/claro (Dark Mode)
+- [ ] - Formulário de contato funcional (aprender tavlez com JS e implementar no portifolio)
 - [ ] - Preview (foto do portifólio)
 
 
