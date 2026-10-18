@@ -1,9 +1,10 @@
 
 const btn =document.getElementById("btn");
-const menuMobile = document.getElementById("menu_mobile");
+const menu = document.getElementById("menu");
 const list = document.getElementById("list");
 const close = document.getElementById("close");
 
+// ! - O Carrossel das imagens do jogo que eu acho que devo trocar para gif
 const container = document.getElementById("carrossel_container"); 
 const btnleft = document.getElementById("btnleft");
 const btnright = document.getElementById("btnright");
@@ -12,20 +13,23 @@ const btnright = document.getElementById("btnright");
 // Função para abrir e fechar o menu mobile
 
 btn.addEventListener("click", () => {
-  menuMobile.classList.toggle("ativo");
+  menu.classList.toggle("ativo");
   list.classList.toggle("ativo");
   close.classList.toggle("ativo");
 });
 
-menuMobile.addEventListener("click", () => {
-    menuMobile.classList.remove("ativo");
-      list.classList.toggle("ativo");
+menu.addEventListener("click", () => {
+    menu.classList.remove("ativo");
+    list.classList.toggle("ativo");
     close.classList.toggle("ativo");
 
 });
 // Fim da função para abrir e fechar o menu mobile
 
 
+
+
+// ! - Talvez eu troque por um gif
 // Função de mover o carrossel para esquerda e direita
 btnleft.addEventListener("click", () =>{
   container.scrollBy({
@@ -57,7 +61,6 @@ window.addEventListener("load", () => {
 
 // como explicar container.scrollLeft = container.clientWidth? 
 // mas pq tem scrollLeft mas não scrollRight?
-
 
 // 4. O MÁGICO "TELETRANSPORTE" INVISÍVEL
 container.addEventListener("scrollend", () => {

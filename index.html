@@ -26,23 +26,7 @@
 
     <header>
         <nav class="navbar">
-            <ul id="menu">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-            </ul>
-
-            <button id="btn">
-                <svg id = "list" xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-                </svg>
-                <svg id = "close" xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                </svg>
-            </button>            
-
-            <div id = "menu_mobile"><!-- precisa centralizar um id -->
+            <div id="menu">
                 <ul>
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#sobre">Sobre</a></li>
@@ -50,9 +34,24 @@
                     <li><a href="#projetos">Projetos</a></li>
                 </ul>
             </div>
-
-
-
+            <div>
+                <button id="btn">
+                    <svg id = "list" xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                    <svg id = "close" xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                    </svg>
+                </button>  
+            </div>          
+<!--             <div id = "menu_mobile">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                </ul>
+            </div> -->
         </nav> 
     </header>
 
@@ -204,7 +203,44 @@
         </section>
         <section id="projetos" class="secao_4">
             <h2>Projetos</h2>
-            <h3>Storm Warden</h3>
+            <div class="todolist">
+                <h3>To-Do list</h3>
+                <img src="images/projects/ToDoList/card-ToDoList.png" alt="">
+                <p> Aplicação de lista de tarefas desenvolvida para consolidar 
+                    conceitos de manipulação do DOM e persitência de dados no navegador.
+                </p>
+                <ul>
+                    <li>
+                        - 🎯 Foco do Projeto: Lógica do DOM, arquitetura de eventos e persistência local.
+                    </li>
+                    <li>
+                        - 🖥️ Layout: Otimizado para Desktop (melhorias de responsividade mobile mapeadas para o futuro).
+                    </li>
+                </ul>
+<!--
+Acredito que alguns trechos não seja bons em colocar no portifolio, está muito grande;
+talvez no README do repositorio seja melhor.
+- 🛠️ **Tecnologias:** HTML5, CSS3, JavaScript (ES6+), LocalStorage.
+
+
+-->
+
+            </div>
+            <div class="guia">
+                <h3>guia dev</h3>
+                <img src="images/projects/guiaDev/card-guiadev.png" alt="">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nemo esse fuga facilis non doloremque beatae ab! Asperiores 
+                    non omnis pariatur!Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Nemo esse fuga facilis non doloremque beatae 
+                </p>
+            </div>
+
+
+
+<!-- TODO - Resolver o Storm warden dps -->
+       <h3>Storm Warden</h3>
             <h4>Jogo 2D em Python (Pygame) & POO</h4>
             <div class="container_1">
                 
@@ -247,7 +283,7 @@
                 <p>1. Programação Orientada a Objetos (POO): Estrutura de entidades do jogo, classes e métodos.  </p>
                 <p>2. Desenvolvimento 2D com Pygame: Manipulação de cenários, camadas em parallax e mecânicas de plataforma.   </p>
                 <p>3. Lógica de Jogos: Loop principal de renderização, tratamento de eventos e colisões. </p>
-            </div>
+            </div> 
         </section>
     </main>
     <footer id="contato">

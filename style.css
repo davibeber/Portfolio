@@ -33,11 +33,11 @@ section {
 
 /* tela do dispositivo | margin | border | padding | (texto/imagem)*/
 
-
+/* ! - Resolver o menu mobile dps */
 header{ /* Topo, a estética geral do menu principal */
     background-color: #565eb6f8;
-    padding: 5px 4%; 
-    display: flex;
+    padding: 45px 4%; 
+
     justify-content: center;
     align-items: center;
 
@@ -45,50 +45,100 @@ header{ /* Topo, a estética geral do menu principal */
     top: 0px; /* menu fixo no topo*/
     z-index: 9999;/* valor alto garante que a camada fique fixa no topo e não seja perdida*/
 
+    display: flex;
+    flex-direction: row;
 
-    nav{
-        &.navbar{
-            display: flex;
-            flex-direction: row;
-        }
-        ul{ /* estética, alinhamento e espaçamento das opções ao redor delas*/
-            list-style:none; /* muda a estética dos pontos do lado de listas*/
-            margin:0px auto; 
-            padding:30px;
-            gap: 50px;
-            display: flex;
-            li{ 
-               a{ /* estetica das palavras em si no menu */
-                    color: #282a2f;
-                    text-decoration: none;
-                    font-size: 20px;
-                    font-weight: bold;
-                    transition: transform 0.2s, color 0.2s; /* Deixa a troca de cor do hover suave */
-                    display:inline-block ; /* links precisam disso para aceitar o transform*/
+        .navbar{
 
-                    &:hover{ 
-                        color: #e7ba8e;
-                        transform: scale(1.2);
-                    }
-                }                
+            display: flex;
+            flex-direction: column-reverse;
+            padding-right: 200px;
+
+
+
+            /* ! - Aqui entra o menu_mobile */
+/*              position: fixed;
+                top:15px;
+                left:0;
+                width: 80%;
+                background-color: rgba(0, 0, 0, 0.466);
+
+                z-index: 99;
+
+                align-items: center;
+
+
+                display: flex;
+                flex-direction: column-reverse; */
+
+
+
+/*                 transform: translateX(-100%);
+                transition: transform 0.4s ease-in-out;
+
+                &.ativo{
+                    transform: translateX(0);
+                } */
+                ul{ /* estética, alinhamento e espaçamento das opções ao redor delas*/
+                    list-style:none; /* muda a estética dos pontos do lado de listas*/
+                    padding-top:77px;
+                    padding-bottom: 30px;
+
+                    align-items: center;
+                    width: 100%;
+
+                    display: none;
+
+                    transition:1.5s; /* ! - Continua não funcionando */
+                    li{ a{ /* estetica das palavras em si no menu */
+                        color: white;
+                        text-decoration: none;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        transition: transform 0.2s, color 0.2s; /* Deixa a troca de cor do hover suave */
+                        display:inline-block ; /* links precisam disso para aceitar o transform*/
+                        gap: 10px;
+                        &:hover{ 
+                            color: #e7ba8e;
+                            transform: scale(1.2);
+
+                            display: block;
+                            color: black; /* ? - Não entendi o pq disso, acho que vou tirar */
+                        }
+                    }                
+                }
             }
-        }
+            
+        } 
+        #btn{
+            display: flex;
+            background:transparent;
+            color: #e7ba8e;
+            border: 2px solid #e7ba8e;
+            padding: 10px 10px;
+            cursor: pointer;
+            
+            #list{
+                    display: flex;
+                    width: 40px;
+                    height: 40px;
+                    
+                    &.ativo{
+                        display: none;
+                    }
+                }    
+                #close{
+                    display: none;
+                    
+                    &.ativo{
+                        display: flex;
+                        width: 40px;
+                        height: 40px;
+                    }
+                } 
+            }
     }
-}
 
-
-
-
-
-
-#btn{
-    display: none;
-}
-
-
-#menu_mobile{
-    display: none;
-}
 
 
 body{ /* comandos gerais de estética do site */
@@ -102,12 +152,12 @@ body{ /* comandos gerais de estética do site */
 
 .secao_1{
     display:flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: center;  
     align-items: center;
     gap:100px;
-    font-size: 3rem;
-    padding-top: 10rem;
+    font-size: 1.25rem;
+    padding-top: 5rem;
     padding-bottom: 6rem;
 
     margin-bottom: 10rem;
@@ -115,7 +165,7 @@ body{ /* comandos gerais de estética do site */
         text-align: left;
         span{ 
             color:#e7ba8e;
-            font-size: 60px;
+            font-size: 2rem;
             font-weight: bold;
         } 
     }
@@ -137,8 +187,8 @@ body{ /* comandos gerais de estética do site */
 
         overflow: visible; /* Garante que nada corte nas bordas */
         svg{ /* Alteração das logos somente */
-            width:45px;
-            height: 45px; /* É bom definir a altura para manter a proporção */
+            width:30px;
+            height: 30px; /* É bom definir a altura para manter a proporção */
             fill:white;
 
             margin: 0;
@@ -170,7 +220,7 @@ body{ /* comandos gerais de estética do site */
     fill:rgb(0, 209, 140);
 }
 
-
+/* 
 @keyframes flutuar {
     0%{
         top:0
@@ -178,10 +228,10 @@ body{ /* comandos gerais de estética do site */
     100%{
         top: 30px;
     }
-}
+} */
 
 .foto_perfil{ 
-    width: 300px;
+    width: 100px;
     height: auto; 
     border: 5px double #F5DABF;
     border-radius: 5%;
@@ -203,7 +253,7 @@ body{ /* comandos gerais de estética do site */
         margin-bottom: 0rem;
     }
     p{
-        max-width: 850px;
+        max-width: 280px;
         font-size: 20px;
         line-height: 1.3;
         text-align: left;
@@ -219,10 +269,11 @@ body{ /* comandos gerais de estética do site */
     flex-direction: column;
     align-items: center;
     gap: 50px;
-    margin-left:10rem;
-    margin-right:10rem;
-    padding-bottom: 20rem;
+    margin-left:2rem;
+    margin-right:1rem;
     
+    justify-content: center;
+
     h2{
         font-size: 3rem;
         color: #e7ba8e;
@@ -231,9 +282,10 @@ body{ /* comandos gerais de estética do site */
     }
     ul li{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         gap: 0px;
+        width:90vw;
         padding-bottom: 20px;
         img{
             width: 100px;
@@ -247,12 +299,11 @@ body{ /* comandos gerais de estética do site */
         }
         .info{
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             gap: 5px;
-            align-items:baseline;
+            align-items:baseline; /* ? - O que é isso? */
             font-size: 1.25rem;
 
-            max-width: 75rem;
         }
     }
 
@@ -270,26 +321,81 @@ body{ /* comandos gerais de estética do site */
     align-items: center;
     padding-bottom: 16rem;
     margin-top:10rem;
+    gap:40px;
+
+    div{/* ! - Vamo fazer um teste nesta div */
+        width:clamp(330px,50vw,500px);
+    /* 
+    ? - Ou talvez não seja aqui ou tenha que especificar as divs que eu quero 
+    ? - Pra isso preciso de uma class para generalizar o comando
+    */
+    }
+
     h2{
-    font-size: 4rem;
-    color:#e7ba8e;
-    padding-bottom: 5rem;
+        font-size: 4rem;
+        color:#e7ba8e;
+        padding-bottom: 5rem;
+    }
+    h3{
+        font-size: 60px;
+        padding: 20px;
+        color: #f4f4f3;
+    }
+    p{
+        font-size: 20px;
+        text-align: left;
+        margin:1rem;
+    }
 
-}
 
-h3{
-    font-size: 60px;
-    padding: 20px;
-
-    color: #f4f4f3;
     
-}
-p{
-    font-size: 20px;
-    text-align: left;
-    margin:3rem;
-}
+    .todolist{
+        display: block;
+        width: 90vw;
+        text-align: center;
+        border: 1px solid white;
+        border-radius: 30px;
+        color: white;
 
+
+        h3{
+        }
+        img{
+            width: 80vw;
+        }
+        p{
+            width: 80vw;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            text-wrap: pretty;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        ul{
+            li{
+                list-style: none;
+                width: 80vw;
+                hyphens: auto;
+                -webkit-hyphens: auto;
+                text-wrap: pretty;
+                
+            }
+        }
+    }
+
+    .guia{
+        width: 90vw;
+        text-align: center;
+        border: 1px solid white;
+        border-radius: 30px;
+        color: white;
+
+        img{
+            width:80vw;
+        }
+    }
 }
 
 
@@ -413,3 +519,15 @@ footer{
 }
 
 
+@media (min-width:800px){
+
+
+.secao_4{
+
+    grid-template-columns: repeat(3, 1fr);
+
+
+}
+
+
+}
