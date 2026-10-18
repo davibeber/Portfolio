@@ -40,19 +40,84 @@ header{ /* Topo, a estética geral do menu principal */
 
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-direction: row;
 
+/* ! - Ainda não me lembro desta parte, necessário copiar */
     position: sticky;
     top: 0px; /* menu fixo no topo*/
     z-index: 9999;/* valor alto garante que a camada fique fixa no topo e não seja perdida*/
 
-    display: flex;
-    flex-direction: row;
+
+    #btn{
+            display: flex;
+            background:transparent;
+            color: #e7ba8e;
+            border: 2px solid #e7ba8e;
+            padding: 10px;
+            cursor: pointer;
+
+            position: relative; /* ? - Pq? */
+            
+/* ? - Tbm não sei */
+            svg { width: 40px; height: 40px; }
+            #close { display: none; }
+            &.ativo {
+                #list { display: none; }
+                #close { display: flex; }
+                }
+            }
+
+/* ! - Mexer nisso aqui e reorganizar os comandos do svgs */
+/* 
+            #list{
+                    display: flex;
+                    width: 40px;
+                    height: 40px;
+                    
+                    &.ativo{
+                        display: none;
+                    }
+                }    
+                #close{
+                    display: none;
+                    
+                    &.ativo{
+                        display: flex;
+                        width: 40px;
+                        height: 40px;
+                    }
+                } 
+            }
+
+
+
+
+ */
+
+
+
 
         .navbar{
 
             display: flex;
             flex-direction: column-reverse;
             padding-right: 200px;
+
+            /* ? */
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: 100vh;
+            padding-top: 110px; /* espaço pro botão */
+            background-color: rgba(0, 0, 0, 0.85);
+            z-index: 99;        
+
+            transform: translateX(-100%);
+            transition: transform 0.4s ease-in-out;
+
+            &.ativo { transform: translateX(0); }
 
 
 
@@ -73,21 +138,14 @@ header{ /* Topo, a estética geral do menu principal */
 
 
 
-/*                 transform: translateX(-100%);
-                transition: transform 0.4s ease-in-out;
-
-                &.ativo{
-                    transform: translateX(0);
-                } */
+                
                 ul{ /* estética, alinhamento e espaçamento das opções ao redor delas*/
                     list-style:none; /* muda a estética dos pontos do lado de listas*/
-                    padding-top:77px;
-                    padding-bottom: 30px;
-
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
                     align-items: center;
-                    width: 100%;
-
-                    display: none;
+                    gap: 30px;
 
                     transition:1.5s; /* ! - Continua não funcionando */
                     li{ a{ /* estetica das palavras em si no menu */
@@ -102,41 +160,18 @@ header{ /* Topo, a estética geral do menu principal */
                             color: #e7ba8e;
                             transform: scale(1.2);
 
+
+                            /* ? - Pelo que parece aqui é necessario tirar isso, pq?*/
                             display: block;
                             color: black; /* ? - Não entendi o pq disso, acho que vou tirar */
                         }
                     }                
                 }
+
             }
             
         } 
-        #btn{
-            display: flex;
-            background:transparent;
-            color: #e7ba8e;
-            border: 2px solid #e7ba8e;
-            padding: 10px 10px;
-            cursor: pointer;
-            
-            #list{
-                    display: flex;
-                    width: 40px;
-                    height: 40px;
-                    
-                    &.ativo{
-                        display: none;
-                    }
-                }    
-                #close{
-                    display: none;
-                    
-                    &.ativo{
-                        display: flex;
-                        width: 40px;
-                        height: 40px;
-                    }
-                } 
-            }
+        
     }
 
 
@@ -522,6 +557,28 @@ footer{
 @media (min-width:800px){
 
 
+    #btn { display: none; }
+/* ! - Isto é temporário */
+    .navbar {
+      position: static;
+      width: auto;
+      height: auto;
+      padding: 0;
+      background: none;
+      transform: none;
+
+      ul { flex-direction: row; gap: 40px; }
+    }
+  }
+
+
+
+
+
+
+
+
+
 .secao_4{
 
     grid-template-columns: repeat(3, 1fr);
@@ -530,4 +587,3 @@ footer{
 }
 
 
-}

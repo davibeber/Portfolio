@@ -1,5 +1,5 @@
 
-const btn =document.getElementById("btn");
+const btn = document.getElementById("btn");
 const menu = document.getElementById("menu");
 const list = document.getElementById("list");
 const close = document.getElementById("close");
