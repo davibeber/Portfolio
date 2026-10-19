@@ -4,7 +4,6 @@ const menu = document.getElementById("menu");
 const list = document.getElementById("list");
 const close = document.getElementById("close");
 
-// ! - O Carrossel das imagens do jogo que eu acho que devo trocar para gif
 const container = document.getElementById("carrossel_container"); 
 const btnleft = document.getElementById("btnleft");
 const btnright = document.getElementById("btnright");
