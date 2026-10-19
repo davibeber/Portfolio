@@ -33,146 +33,93 @@ section {
 
 /* tela do dispositivo | margin | border | padding | (texto/imagem)*/
 
-/* ! - Resolver o menu mobile dps */
-header{ /* Topo, a estética geral do menu principal */
-    background-color: #565eb6f8;
-    padding: 45px 4%; 
 
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
+
+header{
+    background-color: #565eb6f8;
+    padding: 40px;
 
 /* ! - Ainda não me lembro desta parte, necessário copiar */
     position: sticky;
     top: 0px; /* menu fixo no topo*/
     z-index: 9999;/* valor alto garante que a camada fique fixa no topo e não seja perdida*/
-
-
-    #btn{
-            display: flex;
-            background:transparent;
-            color: #e7ba8e;
-            border: 2px solid #e7ba8e;
-            padding: 10px;
-            cursor: pointer;
-
-            position: relative; /* ? - Pq? */
+    
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        #menu{
+            display: none;
+            position: fixed; 
+/* 
+? - Qual a diferença de usar absolute ou fixed ? 
+? - Pq usando absolute ele cria mais espaço horizontal?
+*/
+            text-align: center;
+            background-color: #565eb6f8;            
+            top:100px;
+            left:0;
+            width: 100vw;
+            padding: 0px 0 0 120px;            
             
-/* ? - Tbm não sei */
-            svg { width: 40px; height: 40px; }
-            #close { display: none; }
-            &.ativo {
-                #list { display: none; }
-                #close { display: flex; }
+            &.ativo{
+                display: flex;
+            }
+
+
+/* ! - gap não funciona em nada */
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap:30px; /* * - gap só funciona com display:flex */
+                padding: 30px 0;
+                
+                li{
+                    list-style: none;
+                    a{
+                        color: white;
+                        text-decoration: none;
+                    }
                 }
             }
 
-/* ! - Mexer nisso aqui e reorganizar os comandos do svgs */
-/* 
-            #list{
-                    display: flex;
-                    width: 40px;
-                    height: 40px;
-                    
+        }
+
+        #btn{
+            button{
+                width:40px;
+                height: 40px;
+                background: none;
+                border: none;
+
+
+                #list{
+                    color:white;
+
                     &.ativo{
                         display: none;
                     }
-                }    
-                #close{
-                    display: none;
-                    
-                    &.ativo{
-                        display: flex;
-                        width: 40px;
-                        height: 40px;
-                    }
-                } 
-            }
 
-
-
-
- */
-
-
-
-
-        .navbar{
-
-            display: flex;
-            flex-direction: column-reverse;
-            padding-right: 200px;
-
-            /* ? */
-            position: fixed; 
-            top: 0;
-            left: 0;
-            width: 80%;
-            height: 100vh;
-            padding-top: 110px; /* espaço pro botão */
-            background-color: rgba(0, 0, 0, 0.85);
-            z-index: 99;        
-
-            transform: translateX(-100%);
-            transition: transform 0.4s ease-in-out;
-
-            &.ativo { transform: translateX(0); }
-
-
-
-            /* ! - Aqui entra o menu_mobile */
-/*              position: fixed;
-                top:15px;
-                left:0;
-                width: 80%;
-                background-color: rgba(0, 0, 0, 0.466);
-
-                z-index: 99;
-
-                align-items: center;
-
-
-                display: flex;
-                flex-direction: column-reverse; */
-
-
-
-                
-                ul{ /* estética, alinhamento e espaçamento das opções ao redor delas*/
-                    list-style:none; /* muda a estética dos pontos do lado de listas*/
-                    padding: 0;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 30px;
-
-                    transition:1.5s; /* ! - Continua não funcionando */
-                    li{ a{ /* estetica das palavras em si no menu */
-                        color: white;
-                        text-decoration: none;
-                        font-size: 1.2rem;
-                        font-weight: bold;
-                        transition: transform 0.2s, color 0.2s; /* Deixa a troca de cor do hover suave */
-                        display:inline-block ; /* links precisam disso para aceitar o transform*/
-                        gap: 10px;
-                        &:hover{ 
-                            color: #e7ba8e;
-                            transform: scale(1.2);
-
-
-                            /* ? - Pelo que parece aqui é necessario tirar isso, pq?*/
-                            display: block;
-                            color: black; /* ? - Não entendi o pq disso, acho que vou tirar */
-                        }
-                    }                
                 }
 
+                #close{
+                    display: none;
+
+                    &.ativo{
+                        display: flex;
+                        color:white;
+                    }
+                }
             }
-            
-        } 
-        
+        }
+
+
     }
+
+}
+
+
+
 
 
 
@@ -558,7 +505,6 @@ footer{
 
 
     #btn { display: none; }
-/* ! - Isto é temporário */
     .navbar {
       position: static;
       width: auto;
