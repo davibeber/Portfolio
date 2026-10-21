@@ -38,15 +38,34 @@ section {
 header{
     background-color: #565eb6f8;
     padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-/* ! - Ainda não me lembro desta parte, necessário copiar */
+
+    /* ! - Ainda não me lembro desta parte, necessário copiar */
     position: sticky;
     top: 0px; /* menu fixo no topo*/
     z-index: 9999;/* valor alto garante que a camada fique fixa no topo e não seja perdida*/
     
     .navbar{
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+        
+        .btn_contato{
+            button{
+                padding: 10px 10px;
+                background-color: #e7ba8e;
+                border-radius: 10px;
+                a{
+                    text-decoration: none;
+                    color: #0f1235;
+                }
+            }
+        }
+
         #menu{
             display: none;
             position: fixed; 
@@ -58,11 +77,11 @@ header{
             background-color: #565eb6f8;            
             top:100px;
             left:0;
-            width: 100vw;
-            padding: 0px 0 0 120px;            
+            width: 100%;
             
             &.ativo{
                 display: flex;
+                justify-content: center;
             }
 
 
@@ -73,6 +92,10 @@ header{
                 flex-direction: column;
                 gap:30px; /* * - gap só funciona com display:flex */
                 padding: 30px 0;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                
                 
                 li{
                     list-style: none;
@@ -132,7 +155,7 @@ body{ /* comandos gerais de estética do site */
 
 }
 
-.secao_1{
+.inicio{
     display:flex;
     flex-direction: column-reverse;
     justify-content: center;  
@@ -151,83 +174,30 @@ body{ /* comandos gerais de estética do site */
             font-weight: bold;
         } 
     }
-
-}
-
-
-
-.logo-inicio{
-    display: flex;
-    align-items: center;  
-    a{
-        text-decoration: none;
-        padding: 12px;   
-
-        display: inline-flex; 
-        align-items: center;
-        justify-content: center;
-
-        overflow: visible; /* Garante que nada corte nas bordas */
-        svg{ /* Alteração das logos somente */
-            width:30px;
-            height: 30px; /* É bom definir a altura para manter a proporção */
-            fill:white;
-
-            margin: 0;
-            transition: transform 0.3s ease-in-out;
-            transform-origin: center center;
-            display: block;
-        }
     
+    .foto_perfil{ 
+        width: 100px;
+        height: auto; 
+        border: 5px double #F5DABF;
+        border-radius: 5%;
+        margin-left: 0px;
+        position:relative;
+        animation: flutuar 2s ease-in-out infinite alternate;
     }
-
 }
 
 
-.logo-inicio a:hover svg {
-    transform: scale(1.2);
-}
 
 
-#in{
-    fill:rgb(36, 36, 224);
-    background-color: #ffffff;
-    border-radius: 4px;
-}
 
-#gh{
-    fill:white;
-}
-#wpp{
-    fill:rgb(0, 209, 140);
-}
 
-/* 
-@keyframes flutuar {
-    0%{
-        top:0
-    }    
-    100%{
-        top: 30px;
-    }
-} */
-
-.foto_perfil{ 
-    width: 100px;
-    height: auto; 
-    border: 5px double #F5DABF;
-    border-radius: 5%;
-    margin-left: 0px;
-    position:relative;
-    animation: flutuar 2s ease-in-out infinite alternate;
-}
-
-.secao_2{
+.sobre{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
     padding-bottom: 20rem;
+
     h2{ 
         font-size: 3rem;
         color: #e7ba8e;
@@ -235,40 +205,50 @@ body{ /* comandos gerais de estética do site */
         margin-bottom: 0rem;
     }
     p{
-        max-width: 280px;
         font-size: 20px;
         line-height: 1.3;
         text-align: left;
         text-indent: 30px;
+
+        width:80%;
     }
 }
 
 
 
 
-.secao_3{
+.habilidades{ 
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
-    margin-left:2rem;
-    margin-right:1rem;
     
     justify-content: center;
+    width: 100%;
 
-    h2{
+
+    h2{/* ! - Tira isso */
         font-size: 3rem;
         color: #e7ba8e;
         margin-left: 0rem;
         margin-bottom: 0rem;
     }
-    ul li{
+    ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin: 0 auto;
+    li{
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: start;
         gap: 0px;
         width:90vw;
         padding-bottom: 20px;
+        width:100%;
+        margin: 0 auto;
+
         img{
             width: 100px;
             margin:25px;
@@ -285,10 +265,16 @@ body{ /* comandos gerais de estética do site */
             gap: 5px;
             align-items:baseline; /* ? - O que é isso? */
             font-size: 1.25rem;
+            width:100%;
+
+            span{
+                font-weight: bolder;
+            }
 
         }
     }
 
+}
 }
 
 
@@ -296,87 +282,79 @@ body{ /* comandos gerais de estética do site */
 
 
 
-
-.secao_4{
+.projetos{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 16rem;
-    margin-top:10rem;
-    gap:40px;
+    gap:100px;
 
-    div{/* ! - Vamo fazer um teste nesta div */
-        width:clamp(330px,50vw,500px);
-    /* 
-    ? - Ou talvez não seja aqui ou tenha que especificar as divs que eu quero 
-    ? - Pra isso preciso de uma class para generalizar o comando
-    */
-    }
+    h2{ /* ! - Aumentar e estilizar */
 
-    h2{
-        font-size: 4rem;
-        color:#e7ba8e;
-        padding-bottom: 5rem;
     }
-    h3{
-        font-size: 60px;
-        padding: 20px;
-        color: #f4f4f3;
-    }
-    p{
-        font-size: 20px;
+    div{/* TODO - Centralizar comandos genéricos para cada card */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: left;
-        margin:1rem;
-    }
+        width: clamp(150px,80%,790px);
+        border-radius:25px;
 
 
-    
-    .todolist{
-        display: block;
-        width: 90vw;
-        text-align: center;
-        border: 1px solid white;
-        border-radius: 30px;
-        color: white;
-
-
-        h3{
-        }
         img{
-            width: 80vw;
+            width: 100%; /* * - Acompanha o elemento pai, bem importante */
+            height: auto;
+            border-top-left-radius:25px;
+            border-top-right-radius:25px;
+        }
+
+        p{
+            text-indent: 30px;
+        }
+
+    }
+    .btn_projeto{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px 10px;
+
+
+        button a{
+            text-decoration: none;
+        }
+
+
+    }
+    .todolist{
+        border: 3px solid white;
+
+
+        img{
+
+        }
+
+        
+        h3{
+
         }
         p{
-            width: 80vw;
-            hyphens: auto;
-            -webkit-hyphens: auto;
-            text-wrap: pretty;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            padding: 1rem 1rem;
+
         }
 
         ul{
+            
+
             li{
                 list-style: none;
-                width: 80vw;
-                hyphens: auto;
-                -webkit-hyphens: auto;
-                text-wrap: pretty;
-                
             }
         }
     }
 
-    .guia{
-        width: 90vw;
-        text-align: center;
-        border: 1px solid white;
-        border-radius: 30px;
-        color: white;
 
-        img{
-            width:80vw;
-        }
+    .guia{
+        border: 3px solid white;
+
     }
 }
 
@@ -493,15 +471,105 @@ body{ /* comandos gerais de estética do site */
     hyphens: auto; /* Permite a quebra de palavras com hífen */
 }
 
+.contato{
+    padding-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    h6{
+        padding-bottom: 2rem;
+        font-size: 1rem;
+    }
+    .links{
+        display: flex;
+        align-items: start; 
+        a{
+            text-decoration: none;
+            padding: 12px;   
+
+            display: inline-flex; 
+            align-items: center;
+
+            gap:10px;
+            border-radius: 10px;
+            color: #ffffff;
+
+            overflow: visible; /* Garante que nada corte nas bordas */
+            svg{ /* Alteração das logos somente */
+                width:40px;
+                height: 40px; /* É bom definir a altura para manter a proporção */
+                fill:white;
+
+                margin: 0;
+                transition: transform 0.3s ease-in-out;
+                transform-origin: center center;
+                display: block;
+            }
+        
+        }
+
+    }
+}
+
+.logo-inicio a:hover svg {
+    transform: scale(1.2);
+}
+
+
+
+#in{
+    fill:rgb(36, 36, 224);
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+#gh{
+    fill:white;
+}
+#wpp{
+    fill:rgb(0, 209, 140);
+}
+
+
 footer{
     color: aliceblue;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     padding-bottom: 1rem;
 }
 
 
 @media (min-width:800px){
+
+
+header{
+    padding: 20px;
+
+    .navbar{
+        display: flex;
+
+
+        .btn_contato{
+            right:20px;
+        }
+
+
+        #menu{
+            display:flex;
+            top:0;
+            background-color: transparent;
+            justify-content: center;
+
+            ul{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+
+            }
+        }
+    }
+}
 
 
     #btn { display: none; }
@@ -515,21 +583,28 @@ footer{
 
       ul { flex-direction: row; gap: 40px; }
     }
+
+
+
+
+    .habilidades{
+
+
+        ul{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+        }
+
+    }
+
+
+
+
   }
 
 
 
 
 
-
-
-
-
-.secao_4{
-
-    grid-template-columns: repeat(3, 1fr);
-
-
-}
 
 
