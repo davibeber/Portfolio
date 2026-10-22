@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <noscript>Seu navegador não tem suporte a Javascript ou está desativado!</noscript>
     <title>Portifólio</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
@@ -46,13 +47,13 @@
 
     <main>
         <section id="inicio">
-            <div class="inicio"><!-- inicio-->
+            <div class="hero"><!-- inicio-->
+                <div class="foto_perfil">
+                    <img src="images/foto_perfil_2.jpeg" alt="Foto de perfil">
+                </div>
                 <div> <!-- Somente texto-->
                     <p>Olá, eu sou <span>Davi.</span></p><br>
                     <p>Dev. Front-End</p>
-                </div>
-                <div>
-                    <img class="foto_perfil" src="images/foto_perfil_2.jpeg" alt="Foto de perfil">
                 </div>
             </div>
         </section>
@@ -99,7 +100,7 @@
                     <li>
                         <img class="logo_habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
                         <div class="info">
-                            <p><span>Javascript: </span>Desenvolvimento de scripts dinâmicos, controle de eventos de usuário (addEventListener), declaração de constantes para escopo de funções e manipulação da estrutura DOM.</p>                            
+                            <p><span>Javascript: </span>Estudo inicial em desenvolvimento de scripts dinâmicos, controle de eventos de usuário (addEventListener), declaração de constantes para escopo de funções e manipulação da estrutura DOM.</p>                            
                         </div>
                     </li>
                     <li>
@@ -166,10 +167,10 @@
                 </ul>
                 <div class="btn_projeto">
                     <button>
-                        <a href="https://davibeber.github.io/To-do-list/" target="_blank">Link do projeto</a>
+                        <a href="https://davibeber.github.io/To-do-list/" target="_blank">Projeto</a>
                     </button>
                     <button>
-                        <a href="https://github.com/davibeber/To-do-list" target="_blank">Link do repositório</a>
+                        <a href="https://github.com/davibeber/To-do-list" target="_blank">Código</a>
                     </button>
                 </div>
             </div>
@@ -184,7 +185,8 @@ talvez no README do repositorio seja melhor.
             </div>
             <div class="guia">
                 <img src="" alt="">
-                    <h3>guia dev</h3>
+                    <h3>Guia dev</h3>
+                    <h4>Em andamento</h4>
                 <p><!-- TODO - Usar o Claude para lapidar essa descrição -->
                     Projeto focado em ser um estilo de cheatsheet (uma cola rapida), para centralizar
                     comandos que estudo e uso, com minha explicação, com o intuito de ajudar outros 
@@ -192,10 +194,10 @@ talvez no README do repositorio seja melhor.
                 </p> <!-- TODO - Por links do site ativo e do repositório em todos os projetos -->
                 <div class="btn_projeto">
                     <button>
-                        <a href="https://davibeber.github.io/guia-dev/" target="_blank">Link do projeto</a>
+                        <a href="https://davibeber.github.io/guia-dev/" target="_blank">Projeto</a>
                     </button>
                     <button>
-                        <a href="https://github.com/davibeber/guia-dev" target="_blank">Link do repositório</a>
+                        <a href="https://github.com/davibeber/guia-dev" target="_blank">Repositório</a>
                     </button>
                 </div>
             </div>
@@ -249,7 +251,8 @@ talvez no README do repositorio seja melhor.
             </div> 
         </section> -->
         <section id="contato" class="contato">
-            <h6>email: davibeber.rbr@gmail.com</h6>
+            <h2>Contato</h2>
+            <h6>email: davibeber.rbr@gmail.com</h6><!-- ! - O email está como titulo, isso não é legal -->
                 <div class="links">
                     <a href="https://www.linkedin.com/in/davibeber/" target="_blank" rel="noopener noreferrer">
                         <svg id="in" viewBox="0 0 128 128">
