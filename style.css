@@ -1,20 +1,5 @@
 
-/* Percebi que deveria centralizar o tamanho de textos com p com um unico p{}
-    Resolver isso dps quando possivel
-
-
-pensando em como centralizar comandos
-p{
-font-size: 20px;
-text-wrap: pretty; 
-hyphens: auto;
-text-indent: 30px;
-text-align: left;
-
-}
-
-*/
-
+/* TODO - Necessario criar {} genericas para centralizar comandos num lugar só */
 
 *{
     box-sizing: border-box;
@@ -23,17 +8,9 @@ text-align: left;
     font-family: "Poppins", sans-serif; 
 }
 
+html {scroll-behavior: smooth;}
 
-html {
-    scroll-behavior: smooth;
-}
-
-section {
-    scroll-margin-top: 200px; 
-}
-
-/* tela do dispositivo | margin | border | padding | (texto/imagem)*/
-
+section {scroll-margin-top: 200px; }
 
 
 header{
@@ -72,23 +49,17 @@ header{
         #menu{
             display: none;
             position: fixed; 
-/* 
-? - Qual a diferença de usar absolute ou fixed ? 
-? - Pq usando absolute ele cria mais espaço horizontal?
-*/
             text-align: center;
             background-color: #565eb6f8;            
             top:100px;
             left:0;
+            right:0;
             width: 100%;
             
             &.ativo{
                 display: flex;
                 justify-content: center;
             }
-
-
-/* ! - gap não funciona em nada */
 
             ul{
                 display: flex;
@@ -98,7 +69,6 @@ header{
                 text-align: center;
                 align-items: center;
                 justify-content: center;
-                
                 
                 li{
                     list-style: none;
@@ -117,7 +87,6 @@ header{
                 height: 40px;
                 background: none;
                 border: none;
-
 
                 #list{
                     color:white;
@@ -138,13 +107,10 @@ header{
                 }
             }
         }
-
-
     }
-
 }
 
-
+/* Comandos gerais */
 h2{ /* Comando geral para todos os h2 */
     font-size: 3rem;
     color: #e7ba8e;
@@ -154,41 +120,23 @@ h2{ /* Comando geral para todos os h2 */
 
 
 
-body{ /* comandos gerais de estética do site */
-
-
-
+body{
     background-color: #0f1235;
     color: aliceblue;
     margin-inline: auto;
-    /* * - divide o espaço livre dos lados igualmente entre minhas margens */
-    /* * - Só funciona se o elemento tiver uma largura menor que a do pai. */
-    /* * - margin-inline precisa de largura para trabalhar, por isso não funciona */
-    /* ! - Mas não ta funcionando aqui, pelo menos não em tudo. Provavelmente alguma especificação está atrapalhando*/
-
 }
 
 .hero{
     margin-top: 100px;
     margin-bottom: 250px;
-
-
     gap:3rem;
-
-
     display: flex;
     flex-direction: column;
     width: 80%;
     height: auto;
     margin-inline: auto;
-    align-items: center; /* ? - Centraliza todos os itens? */
-    text-align: center; /* ? - Centraliza somente os textos ou tudo que estiver em p? */
-
-/* 
-? - Eu esqueci do pq mesmo limitando o width na div, o texto respeita mas a imagem não, 
-? - ela continua do tamanho original. seria por causa do proprio tamanho original? 
-*/
-
+    align-items: center;
+    text-align: center; 
     p{ 
         font-size: clamp(1.8rem, 5vw, 3.5rem); 
         span{ 
@@ -196,26 +144,13 @@ body{ /* comandos gerais de estética do site */
             font-weight: bold;
         } 
     }
-    
-    .foto_perfil{ 
-
-
-        img{
-            border: 5px double #F5DABF;
-            border-radius: 5%;
-            position:relative;
-            width:clamp(130px,40vw,250px);
-            
-        }
-
-
-        /* * align-self: center - faz a mesma coisa que o align-items, mas só para ele. */
+    .foto_perfil img{
+        border: 5px double #F5DABF;
+        border-radius: 5%;
+        position:relative;
+        width:clamp(130px,40vw,250px);
     }
 }
-
-
-
-
 
 
 .sobre{
@@ -224,8 +159,6 @@ body{ /* comandos gerais de estética do site */
     align-items: center;
     gap: 50px;
     padding-bottom: 20rem;
-
-
 
     p{
         text-align: left;
@@ -243,14 +176,11 @@ body{ /* comandos gerais de estética do site */
 }
 
 
-
-
 .habilidades{ 
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
-    
     justify-content: center;
     width: 90%;
     margin-inline: auto;
@@ -265,53 +195,48 @@ body{ /* comandos gerais de estética do site */
     ul {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        /* TODO - Entender como isso funciona */
+        
         gap: 30px;
         margin: 0 auto;
-    li{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: start;
-        gap: 0px;
-        width:90vw;
-        padding-bottom: 20px;
-        width:100%;
-        margin: 0 auto;
-        hyphens: auto; /* Permite a quebra de palavras com hífen */
-        -webkit-hyphens: auto; /* Suporte para navegadores mais antigos/Safari */
-        text-wrap: pretty; /* Garante que o texto seja quebrado de forma adequada */
-
-        img{
-            width: 100px;
-            margin:25px;
-        }
-        
-        #gh_habilidades{
-            width:100px;
-            height:150px;
-            margin:25px;
-        }
-        .info{
+        li{
             display: flex;
             flex-direction: column;
-            gap: 5px;
-            align-items:baseline; /* ? - O que é isso? */
-            font-size: 1.25rem;
+            align-items: center;
+            text-align: start;
+            gap: 0px;
+            width:90vw;
+            padding-bottom: 20px;
             width:100%;
+            margin: 0 auto;
 
-            span{
-                font-weight: bolder;
+            hyphens: auto; /* Permite a quebra de palavras com hífen */
+            -webkit-hyphens: auto; /* Suporte para navegadores mais antigos/Safari */
+            text-wrap: pretty; /* Garante que o texto seja quebrado de forma adequada */
+            
+            img{
+                width: 100px;
+                margin:25px;
             }
-
+            #gh_habilidades{
+                width:100px;
+                height:150px;
+                margin:25px;
+            }
+            .info{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                align-items:baseline; /* ? - O que é isso? */
+                font-size: 1.25rem;
+                width:100%;
+                span{
+                    font-weight: bolder;
+                }
+            }
         }
     }
-
 }
-}
-
-
-
-
 
 
 .projetos{
@@ -319,31 +244,33 @@ body{ /* comandos gerais de estética do site */
     flex-direction: column;
     align-items: center;
     gap:100px;
+    padding-bottom: 100px;
 
-    h2{ /* ! - Aumentar e estilizar */
+    /* ! - h2{ } */
 
-    }
-    div{/* TODO - Centralizar comandos genéricos para cada card */
+    div{/* TODO - Centralizar comandos genéricos para todos os cards */
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: left;
         width: clamp(150px,80%,790px);
         border-radius:25px;
-
-
+        
         img{
             width: 100%; /* * - Acompanha o elemento pai, bem importante */
             height: auto;
             border-top-left-radius:25px;
             border-top-right-radius:25px;
         }
-
+        h3{
+            font-size: 2rem;
+            padding: 20px 0;
+        }
         p{
             text-indent: 30px;
         }
-
     }
+    
     .btn_projeto{
         display: flex;
         flex-direction: column;
@@ -351,61 +278,44 @@ body{ /* comandos gerais de estética do site */
         padding: 10px 10px;
         gap:50px;        
         padding: 60px 0;
-
-
+        
         button {        
             background-color:#202559;
             border:none;
             border-radius: 10px;
             padding: 4px;
+            
             a{
                 color: #dbdbdb;
                 text-decoration: none;
                 font-family:inherit;
                 font-size: 1.25rem;
-
             }
         }
-
     }
+    
     .todolist{
         border: 3px solid #565eb6f8;
-
-
-        img{
-
-        }
-
         
-        h3{
-            font-size: 2rem;
-        }
-
+        /* ! - img{ } */
+        
         p{
             padding: 1rem 1rem;
+            
             /* ! - Importante */
             hyphens: auto; /* Permite a quebra de palavras com hífen */
             -webkit-hyphens: auto; /* Suporte para navegadores mais antigos/Safari */
             text-wrap: pretty; /* Garante que o texto seja quebrado de forma adequada */
-
         }
-
-        ul{
-            
-
-            li{
+        
+        ul li{
                 list-style: none;
             }
         }
-    }
-
-
+    
     .guia{
         border: 3px solid #565eb6f8;
-
-        h3{
-            font-size: 2rem;
-        }
+        
         h4{
             color:black;
             background-color:#d65601;
@@ -420,15 +330,11 @@ body{ /* comandos gerais de estética do site */
             -webkit-hyphens: auto; /* Suporte para navegadores mais antigos/Safari */
             text-wrap: pretty; /* Garante que o texto seja quebrado de forma adequada */
         }
-
     }
 
     .demo-jogo{
-        border: 3px solid #565eb6f8;
-
-        
+        border: 3px solid #565eb6f8;    
     }
-
 }
 
 
@@ -441,13 +347,17 @@ body{ /* comandos gerais de estética do site */
     justify-content: center;
     align-items: center;
     text-align: center;
+    
     h6{
         padding-bottom: 2rem;
         font-size: 1rem;
     }
+
     .links{
         display: flex;
-        align-items: start; 
+        flex-direction: column;
+        align-items:start; 
+    
         a{
             text-decoration: none;
             padding: 12px;   
@@ -460,6 +370,7 @@ body{ /* comandos gerais de estética do site */
             color: #ffffff;
 
             overflow: visible; /* Garante que nada corte nas bordas */
+            
             svg{ /* Alteração das logos somente */
                 width:40px;
                 height: 40px; /* É bom definir a altura para manter a proporção */
@@ -469,16 +380,12 @@ body{ /* comandos gerais de estética do site */
                 transition: transform 0.3s ease-in-out;
                 transform-origin: center center;
                 display: block;
-            }
-        
+            }        
         }
-
     }
 }
 
-.logo-inicio a:hover svg {
-    transform: scale(1.2);
-}
+
 
 
 
@@ -515,8 +422,17 @@ header{
 
 
         .btn_contato{
-            right:20px;
-            margin-right: 150px;
+            button{
+                padding: 10px 10px;
+                background-color: #e7ba8e;
+                border-radius: 10px;
+                a{
+                    text-decoration: none;
+                    color: #0f1235;
+                    font-family:"Poppins", sans-serif; 
+
+                }
+            }
         }
 
 
@@ -525,6 +441,8 @@ header{
             top:0;
             background-color: transparent;
             justify-content: center;
+            width: 80%;
+            margin-inline: auto;
 
             ul{
                 display: flex;
@@ -558,41 +476,21 @@ header{
 
     p{
         font-size: 3rem;
-        span{
-
-        }
+        /* ! - span{} */
 
     }
 
-    .foto_perfil{
-        img{
-
-        }
-    }
+    /* ! - .foto_perfil{img{ }} */
 
 }
 
 .projetos{
-    h2{
 
-    }
-    div{
-
-    }
-    img{
-
-    }
-
-    p{
-
-    }
     .btn_projeto{
         display: flex;
         flex-direction: row;
         gap: 20px;
-        button a{
 
-        }
     }
 }
 
@@ -600,11 +498,6 @@ header{
     display: flex;
     flex-direction: column;
 
-
-
-    h6{
-
-    }
     .links{
         display: flex;
         flex-direction: row;
