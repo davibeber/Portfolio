@@ -15,12 +15,11 @@ html {
 
 
 header{
-    background-color: #202559;
+    background-color: #272d6d;
     padding: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 3px solid #565eb6;
 
     /* ! - Ainda não me lembro desta parte, necessário copiar */
     position: sticky;
@@ -54,7 +53,7 @@ header{
             position: absolute;/* ! - Essa função, mesmo estando para mobile, afeta o menu da versao desktop */
             /* ! - Necessario por static e para desktop flex-direction: row, dps adaptando */
             text-align: center;
-            background-color: #171b4a;            
+            background-color: #272d6d;            
             top:100px;
             left:0;
             right:0;
@@ -152,7 +151,7 @@ body{
     .foto_perfil img{
         border-radius: 5%;
         position:relative;
-        width:clamp(130px,40vw,300px);
+        width:clamp(130px,40vw,270px);
     }
 }
 
@@ -355,7 +354,7 @@ body{
 
 
 .contato{
-    background-color: #202559;
+    background-color: #272d6d;
     display: flex;
     flex-direction: column;
     padding-bottom: 40px;
@@ -416,7 +415,7 @@ body{
 
 
 footer{
-    background-color: #202559;
+    background-color: #272d6d;
     color: white;
     font-size: 15px;
     text-align: center;
