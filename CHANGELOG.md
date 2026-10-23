@@ -1,7 +1,26 @@
-# Changelog
 
-Todas as mudanças neste projeto serão documentadas neste arquivo.
 
+## [v2.0.0] - 2026-10-22
+
+### Adicionado
+- Seção de contato própria, com links para LinkedIn, GitHub, WhatsApp e Instagram
+- Novos projetos: To Do List, Guia Dev e Storm Warden
+
+### Alterado
+- CSS reescrito em mobile first, usando nesting
+- Menu unificado: uma única estrutura para mobile e desktop
+- Fonte trocada de Roboto para Poppins
+
+### Removido
+- Trechos de HTML e JavaScript sem uso
+- Animação da foto de perfil
+
+### Corrigido
+- Bugs de layout e do menu mobile
+- Botão de contato que não respondia ao clique no desktop
+
+
+- Primeira versão do portfólio
 ## [v1.0.0] - 02/09/26
 
 ### Lançamento Oficial
