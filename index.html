@@ -1,36 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html> 
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <noscript>Seu navegador não tem suporte a Javascript ou está desativado.</noscript>
-    <title>Portfólio</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <noscript>Seu navegador não tem suporte a Javascript ou está desativado!</noscript>
+    <title>Portifólio</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <ul id="menu">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-            </ul>
-            <button id="btn">
-                <svg id = "list" xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-                </svg>
-                <svg id = "close" xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                </svg>
-            </button>            
-
-            <div id = "menu_mobile">
+            <div id="menu">
                 <ul>
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#sobre">Sobre</a></li>
@@ -38,47 +23,37 @@
                     <li><a href="#projetos">Projetos</a></li>
                 </ul>
             </div>
+            <div class="btn_contato">
+                <button>
+                    <a href="#contato">Contato</a>
+                </button>
+            </div>
+            <div id="btn">
+                <button>
+                    <svg id = "list" xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                    <svg id = "close" xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                    </svg>
+                </button>  
+            </div>          
         </nav> 
     </header>
     <main>
         <section id="inicio">
-            <div class="secao_1"><!-- inicio-->
-                <div><!-- Conteudo do texto e links-->
-                    <div><!-- Somente texto-->
-                        <p>Olá, eu sou <span>Davi.</span></p><br>
-                        <p>Dev. Front-End / <br>Estudante de ADS</p>
-                    </div>
-                    <div class="logo-inicio"> <!--Somente os links-->
-                        <a href="https://www.linkedin.com/in/davibeber/" target="_blank" rel="noopener noreferrer">
-                            <svg id="in" viewBox="0 0 128 128">
-                                <path d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"></path>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/davibeber" target="_blank" rel="noopener noreferrer">
-                            <svg id="gh" viewBox="0 0 128 128">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"></path><path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"></path>
-                            </svg>
-                        </a>
-                        <a href="https://wa.link/8538ao" target="_blank" rel="noopener noreferrer">
-                            <svg id="wpp" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/_davibeber.rbr/" target="_blank" rel="noopener noreferrer">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-                            </svg>
-                        </a>
-                    </div>
-                    <h6>E-mail: davibeber.rbr@gmail.com</h6>
+            <div class="hero"><!-- inicio-->
+                <div class="foto_perfil">
+                    <img src="images/foto_perfil_2.jpeg" alt="Foto de perfil">
                 </div>
-                <div>
-                    <img src="images/foto_perfil_2.jpeg" alt="Foto de perfil" class="foto_perfil">
+                <div> <!-- Somente texto-->
+                    <p>Olá, eu sou <span>Davi.</span></p><br>
+                    <p>Dev. Front-End</p>
                 </div>
             </div>
         </section>
         <section id="sobre">
-            <div class="secao_2">
+            <div class="sobre">
                 <div>
                     <h2>Sobre mim</h2>
                 </div>
@@ -98,38 +73,39 @@
             </div>
         </section>
         <section id="habilidades">
-            <div class="secao_3">
+            <div class="habilidades">
                 <div>
                     <h2>Habilidades</h2>
                 </div>
                 <ul>
-                    <li> <!-- ESPECIFICAÇÕES DAS LOGOS-->
+                    <li>
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-                        <!-- div class = "info"-->
                         <div class="info">
-                            <h3>HTML:</h3>
-                            <p>Estruturação semântica e organização de hierarquia de conteúdos.</p>                            
+                            <p><span>HTML: </span>Estruturação semântica e organização de hierarquia de conteúdos.</p>                            
                         </div>
                     </li>
                     <li>
                         <img class="logo_habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
                         <div class="info">
-                            <h3>CSS:</h3>
-                            <p>Estilização moderna, foco em arquitetura visual limpa e design adaptável para mobile e desktop</p>                            
+                            <p><span>CSS: </span>Estilização moderna, com layouts limpos e adaptáveis a mobile e desktop (Flexbox, Grid e mobile first).</p>    
                         </div>
                     </li>
                     <li>
                         <img class="logo_habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
                         <div class="info">
-                            <h3>Javascript:</h3>
-                            <p>Desenvolvimento de scripts dinâmicos, controle de eventos de usuário (addEventListener), declaração de constantes para escopo de funções e manipulação da estrutura DOM.</p>                            
+                            <p><span>Javascript: </span>Nível inicial: eventos e manipulação de classes (menu mobile). Tive contato com localStorage em um To Do List feito com videoaula. Em aprendizado.</p>                            
+                        </div>
+                    </li>
+                    <li>
+                        <img class="logo_habilidades" src="images/logos/node-js-svg.png" />
+                        <div class="info">
+                            <p><span>Node.js: </span>Primeiro contato, usando a biblioteca marked (conversão de Markdown em HTML) em um projeto pessoal.</p>
                         </div>
                     </li>
                     <li>
                         <img class="logo_habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
                         <div class="info">
-                            <h3>GIT:</h3>
-                            <p>Conhecimento com commit, push e branch secundarias para repositorio e conexao com o GitHub</p>                            
+                            <p><span>Git: </span>Conhecimento com commit, push e branch secundarias para repositorio e conexao com o GitHub.</p>                            
                         </div>
                     </li>
                     <li>
@@ -137,15 +113,13 @@
                             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
                         </svg>
                         <div class="info">
-                            <h3>GitHub:</h3>
-                            <p>Conhecimento na criação de repositórios e práticas de README.</p>                            
+                            <p><span>Github: </span>Conhecimento na criação de repositórios e práticas de README.</p>                            
                         </div>             
                     </li>
                     <li>
                         <img class="logo_habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
                         <div class="info">
-                            <h3>Python:</h3>
-                            <p>Experiência com linguagem procedural e POO, alem de exeperiências em práticas recentes com uso de bibliotecas como
+                            <p><span>Python: </span>Experiência com linguagem procedural e POO, alem de exeperiências em práticas recentes com uso de bibliotecas como
                             pygame,numpy e sched.
                             </p>                            
                         </div>  
@@ -153,81 +127,117 @@
                     <li>
                         <img class="logo_habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
                         <div class="info">
-                            <h3>Java:</h3>
-                            <p> Conhecimento básico. Fundamentos  de POO (Programação Orientada a Objetos) consolidados.</p>                            
+                            <p><span>Java: </span>Conhecimento básico, com fundamentos de orientação a objetos consolidados.</p>                            
                         </div>
                     </li>
                     <li>
                         <img class="logo_habilidades" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
-                        <div class="info">
-                            <h3>SQL:</h3>
-                            <p>Revisão pendente.</p>                            
+                        <div class="info"> <!-- !- Rever essa descrição, está mal colocada e preciso enfatizar que ja estudei isso porém não foquei esse ano -->
+                            <p><span>SQL: </span>Conhecimento básico em criação e modelagem de bancos de dados. Estudado anteriormente, hoje fora do meu foco.</p>                            
                         </div>         
                     </li>
                 </ul>
             </div>    
         </section>
-        <section id="projetos" class="secao_4">
+        <section id="projetos" class="projetos">
             <h2>Projetos</h2>
-<!-- 
-            <div>
-                <h2>Cheatsheet</h2>
-                <p></p>
-### 📝 To-Do List App
-
-Aplicação de lista de tarefas desenvolvida para consolidar conceitos de manipulação do DOM e persitência de dados no navegador.
-
-- 🛠️ **Tecnologias:** HTML5, CSS3, JavaScript (ES6+), LocalStorage.
-- 🎯 **Foco do Projeto:** Lógica do DOM, arquitetura de eventos e persistência local.
-- 🖥️ **Layout:** Otimizado para Desktop (melhorias de responsividade mobile mapeadas para o futuro). </div>-->
-
-            <div>
-                <img src="images/projects/ToDoList/image-card-todolist.png" alt="">
-            </div>
-
-            
-            <h3>Storm Warden</h3>
-            <h4>Jogo 2D em Python (Pygame) & POO</h4>
-            <div class="container_1">
-                <button class="btnleft" id="btnleft">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm11.5 5.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
-                    </svg>
-                </button>
-                <div class="carrossel_container" id="carrossel_container">
-                    <div class="carrossel_track">
-
-                        <img src="images/boss.png" class = "clone" alt="">
-
-                        <img src="images/menu.png" id="first-img" alt="">
-                        <img src="images/inicio.png" alt="">
-                        <img src="images/onda.png" alt="">
-                        <img src="images/defesa.png" alt="">
-                        <img src="images/cura.png" alt="">
-                        <img src="images/boss.png" id="last-img" alt="">
-
-                        <img src="images/menu.png" class = "clone" alt="">
-                    </div>
+            <div class="todolist">
+                <img src="images/projects/ToDoList/card-ToDoList.png" alt="">
+                <div class="descricao">
+                        <h3>To Do List</h3>
+                    <p> Aplicação de lista de tarefas desenvolvida para consolidar 
+                        conceitos de manipulação do DOM e persistência de dados no navegador.
+                    </p>
+                    <ul>
+                        <li>
+                            Foco: lógica do DOM, eventos e armazenamento local.
+                        </li>
+                        <li>
+                            Layout otimizado para desktop apenas. A versão mobile está nos planos.
+                        </li>
+                    </ul>
                 </div>
-                <button class="btnright" id="btnright">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm4.5 5.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
-                    </svg>
-                </button>
+                <div class="btn_projeto">
+                    <button>
+                        <a href="https://davibeber.github.io/To-do-list/" target="_blank">Projeto</a>
+                    </button>
+                    <button>
+                        <a href="https://github.com/davibeber/To-do-list" target="_blank">Código</a>
+                    </button>
+                </div>
+            
             </div>
-            <p id="deslize-instrucao">Deslize para o lado</p>
-            <div class="sw_descricao">
-                <h5>Descrição do projeto: </h5>
-                <p>Uma demonstração de jogo 2D desenvolvida como projeto acadêmico para praticar conceitos 
-                fundamentais de desenvolvimento de software e lógica de programação em Python. O objetivo principal deste projeto foi aplicar na prática conceitos essenciais de programação através da criação de um jogo interativo. Durante o desenvolvimento, foram explorados e implementados:</p>
-                
-                <p>1. Programação Orientada a Objetos (POO): Estrutura de entidades do jogo, classes e métodos.  </p>
-                <p>2. Desenvolvimento 2D com Pygame: Manipulação de cenários, camadas em parallax e mecânicas de plataforma.   </p>
-                <p>3. Lógica de Jogos: Loop principal de renderização, tratamento de eventos e colisões. </p>
+            <div class="guia">
+                <img src="" alt="">
+                    <h3>Guia dev</h3>
+                    <h4>Em andamento</h4>
+                <p>
+                    Cheatsheet com os comandos que estudo e uso no dia a dia, cada um com
+                    uma explicação nas minhas palavras. A ideia é ajudar outras pessoas
+                    que estão começando na programação.
+                </p>
+                <div class="btn_projeto">
+                    <button>
+                        <a href="https://davibeber.github.io/guia-dev/" target="_blank">Projeto</a>
+                    </button>
+                    <button>
+                        <a href="https://github.com/davibeber/guia-dev" target="_blank">Repositório</a>
+                    </button>
+                </div>
+            </div>
+            <div class="demo-jogo">
+                <img src="images/menu.png" alt="">
+                <div class="descricao">
+                    <h3>Storm Warden</h3>
+                    <!-- <h4>Jogo 2D em Python (Pygame) & POO</h4> -->
+
+                        <p>
+                            Uma demonstração de jogo 2D desenvolvida 
+                            como projeto acadêmico para praticar conceitos 
+                            fundamentais de desenvolvimento de software e lógica de programação em Python. 
+                            O objetivo principal deste projeto foi aplicar na prática conceitos essenciais 
+                            de programação através da criação de um jogo interativo. 
+                            Durante o desenvolvimento, foram explorados e implementados:
+                        </p>    
+                        <p>1. Programação Orientada a Objetos (POO): Estrutura de entidades do jogo, classes e métodos.  </p>
+                        <p>2. Desenvolvimento 2D com Pygame: Manipulação de cenários, camadas em parallax e mecânicas de plataforma.   </p>
+                        <p>3. Lógica de Jogos: Loop principal de renderização, tratamento de eventos e colisões. </p>
+                </div>
+                <div class="btn_projeto">
+                    <button>
+                        <a href="https://github.com/davibeber/Storm_Warden-DEMO-" target="_blank">Código</a>
+                    </button>
+                </div>
             </div>
         </section>
+        <section id="contato" class="contato">
+            <h2>Contato</h2>
+            <h6>email: davibeber.rbr@gmail.com</h6><!-- ! - O email está como titulo, isso não é legal -->
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/davibeber/" target="_blank" rel="noopener noreferrer">
+                        <svg id="in" viewBox="0 0 128 128">
+                            <path d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"></path>
+                        </svg> Linkedin
+                    </a>
+                    <a href="https://github.com/davibeber" target="_blank" rel="noopener noreferrer">
+                        <svg id="gh" viewBox="0 0 128 128">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"></path><path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"></path>
+                        </svg> Github
+                    </a>
+                    <a href="https://wa.link/h9w5x7" target="_blank" rel="noopener noreferrer">
+                        <svg id="wpp" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                        </svg> Whatsapp
+                    </a>
+                    <a href="https://www.instagram.com/_davibeber.rbr/" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                        </svg> Instagram
+                    </a>
+                </div>
+        </section>
     </main>
-    <footer id="contato">
+    <footer>
         <section>
             <p> © 2026 - Davi Béber Ribeiro </p>
         </section>
